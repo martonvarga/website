@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Varga Márton magántanár weboldala. Matematika vizsgafelkészítés és magánoktatás.">
+    <meta name="keywords" content="Varga Márton, magántanár, matematika, vizsgafelkészítés, magánoktatás, Budapest, magyar nyelv, Budapest XIII. kerület, Újlipót,
+         legjobb magántanár,oktatás, közgazdász, hallgató, felkészítés, középiskola, egyetem, emelt szintű érettségi, központi felvételi, zárthelyi vizsgák">
+    <meta name="author" content="Varga Márton">
+    <title>vargamarton/oktatas/orak-kurzusok</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            font-size: 105%;
+            color: white;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        #header {
+            display: flex;
+            height: 8%;
+            box-sizing: border-box;
+            padding: 0 4%; 
+        }
+        #bttn_nacsCs, #bttn_kisCs {
+            width: 25%;
+            height: 100%;
+            text-align: center;
+            line-height: 100%; 
+            border: 1px solid white;
+            box-sizing: border-box;
+            transition: box-shadow 0.4s; /* Átmenet a box-shadow tulajdonság változásakor */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #bttn_nacsCs a, #bttn_kisCs a {
+            display: inline-block; 
+            vertical-align: middle; 
+            line-height: 2.5; 
+        }
+        #bttn_nacsCs.active {
+            box-shadow: 0 0 30px deepskyblue inset, 0 0 30px deepskyblue inset, 0 0 10px deepskyblue inset, 0 0 10px deepskyblue inset, 0 0 10px deepskyblue inset;
+        }
+        #bttn_kisCs.active {
+            box-shadow: 0 0 30px deepskyblue inset, 0 0 30px deepskyblue inset, 0 0 10px deepskyblue inset, 0 0 10px deepskyblue inset, 0 0 10px deepskyblue inset;
+        }
+        #toltes9, #toltes10 {
+            height: 5%;
+            display: flex;
+            box-sizing: border-box;
+        }
+        #szoveg {
+            padding: 0 4%; 
+            box-sizing: border-box;
+            display: flex;
+        }
+        #nagyCs, #kisCs {
+            display: none; 
+        }
+        #nagyCs.active, #kisCs.active {
+            display: block; 
+        }
+    </style>
+    <script>
+        function showDiv(divId){                                                                
+            document.getElementById('nagyCs').classList.remove('active'); 
+            document.getElementById('kisCs').classList.remove('active'); 
+            document.getElementById(divId).classList.add('active'); 
+            
+            // Resetting the box shadows
+            document.getElementById('bttn_nacsCs').classList.remove('active');
+            document.getElementById('bttn_kisCs').classList.remove('active');
+            
+            // Setting the active state based on the clicked button
+            if (divId === 'nagyCs') {
+                document.getElementById('bttn_nacsCs').classList.add('active');
+            } else {
+                document.getElementById('bttn_kisCs').classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="toltes9"></div>
+    <div id="header">
+
+        <div id="bttn_nacsCs" class="active" onclick="showDiv('nagyCs')">
+            <a href="javascript:void(0);">Egyéni konzultáció/felkészítés</a>
+        </div>
+        
+        
+        <div id="bttn_kisCs" onclick="showDiv('kisCs')">
+            <a href="javascript:void(0);">Kiscsoportos kurzusok</a>
+        </div>
+    </div>
+    <div id="toltes10"></div>
+    <div id="szoveg">
+        <div id="nagyCs" class="active">
+            <p style="text-align: justify;">
+                
+                <br><br>Általános iskola felső tagozatosoknak, középiskolásoknak tartok matematika korrepetálást, konzultációt, felzárkóztatást; 8. osztályos központi felvételizők, illetve közép és emelt szinten érettségizők vizsgafelkészítését is vállalom. Egyetemi szinten matek 1, matek 2, analízis, valószínűségszámítás, lineáris algebra, gazdasági matematika, statisztika és ökonometria tárgyakból tudok segíteni.
+                Oktattam már hallgatókat a Budapesti Gazdasági Egyetemről, a Metropolitan Egyetemről, az Óbudai Egyetemről, a Corvinus Egyetemről és a Műszaki Egyetemről is. Emellett vállalom angol vagy német nyelvű tananyag oktatását, akár angol nyelven. Készítettem fel tanulókat  osztrák és  német érettségire is (az előbbire angolul, az utóbbira magyarul).
+                <br><br><br>Az egyéni konzultáció lehetővé teszi, hogy felmérjem a tanuló/hallgató tudását, esetleges bizonytalanságait, hiányosságait, és így teljes mértékben alkalmazkodjak az ő igényeihez, tempójához és végigkísérjem a célja eléréséig vezető úton.
+                A konzultáció ára 5000 Ft /45 perc, akár online, akár személyesen. Az online platform tekintetében rugalmas vagyok, a személyes órát azonban kizárólag a Keleti-Pályaudvartól, valamint a Városligettől sétával kényelmesen elérhető, csendes lakásomban tudom megtartani.
+            </p>
+        </div>
+        <div id="kisCs">
+                        <p style="text-align: justify;">
+                
+                <br><br>A 8. osztályos felvételire és a középszintű érettségire csoportos, 6-8 fős, vizsgafelkészítő kurzusokat is indítok. Célzottan a vizsgák típusfeladataira, témakörök szerint haladva, intenzíven, egy 10 hetes tanfolyam keretében készítem fel a tanulókat a megmérettetésre.
+                A 8.-os felvételire felkészítő kurzusok lehetséges idősávairól a nyár végén, ezen a felületen fogok közzétenni információkat, és augusztus 31.-től lesz lehetőség jelentkezni rájuk.
+                <br><br><br>A kurzus díja órára lebontva 3 000 Ft /45 perc, így a teljes kurzus ára összesen 60 000 Ft (10 héten keresztül heti egy 90 perces alkalom). A kurzus online és személyes formában is meg lesz hirdetve, online Skype-on, személyesen pedig a Városliget közelében található lakásomban fogom tartani az órákat.
+                Amennyiben szeptember 30.-áig jelentkeznek, úgy az órára lebontott ár csak 2500 Ft (50%-kal olcsóbb, mint az egyéni konzultáció), és így a teljes kurzus ára 50 000 Ft.
+                <br><br><br>A középszintű érettségire felkészítő kurzusok időpontjai pedig az ünnepek során várhatóak, és ezekre január 1.-től lehet majd jelentkezni.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

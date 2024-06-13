@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Varga Márton magántanár weboldala. Matematika vizsgafelkészítés és magánoktatás.">
+    <meta name="keywords" content="Varga Márton, magántanár, matematika, vizsgafelkészítés, magánoktatás, Budapest, magyar nyelv, Budapest XIII. kerület, Újlipót,
+         legjobb magántanár,oktatás, közgazdász, hallgató, felkészítés, középiskola, egyetem, emelt szintű érettségi, központi felvételi, zárthelyi vizsgák">
+    <meta name="author" content="Varga Márton">
+    <title>Varga Márton Oktatás </title>  
+    <style> 
+        html, body {
+            color: white;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            font-size: 105%;
+            box-sizing: border-box;
+        }
+        #letolt {
+            box-sizing: border-box;
+            height: 1px;
+            border-style: solid;
+            border-width: 0.01px;
+           
+        }
+        #szoveg {
+            box-sizing: border-box;
+            padding: 2%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') 
+            {
+                save();
+            }
+        });
+
+
+        function biztkerdes(){
+            var letoltjelszo = prompt("Hoppá fejlesztői környezethez tévedtél!\nNe aggódj csak nyomj a 'OK' gombra");
+            if (letoltjelszo === "wini")
+            {
+                downloadPDF()
+            }
+        }
+
+        function save() {
+            var email = document.getElementById("bevitelimezo").value; // Beviteli mező értékének lekérése
+            if (email) { // Ellenőrizzük, hogy az e-mail mező nem üres
+                var emailList = JSON.parse(localStorage.getItem('emailList')) || []; // E-mailek listájának lekérése a localStorage-ból, vagy üres tömb inicializálása, ha nem létezik
+
+                if (emailList.includes(email)) { // Ellenőrizzük, hogy az e-mail cím már szerepel-e a listában
+                    alert('Ezzel az e-mail címmel már sikersen felirakoztak!'); // Ha már elmentettük az e-mail címet, figyelmeztetést küldünk
+                } else {
+                    emailList.push(email); // Új e-mail cím hozzáadása a listához
+                    localStorage.setItem('emailList', JSON.stringify(emailList)); // Frissített lista tárolása a localStorage-ban
+                    alert('Sikeres feliratkozás!'); // Megerősítő üzenet küldése
+                }
+            } else {
+                alert('Kérem, adja meg az e-mail címét!'); // Figyelmeztető üzenet, ha az e-mail mező üres
+            }
+        }
+
+        
+        function downloadPDF() {
+                            // Az email listát localStorage-ból vesszük ki, vagy egy üres tömböt inicializálunk, ha nem létezik
+                        var emailList = JSON.parse(localStorage.getItem('emailList')) || [];
+
+                
+                        if (emailList.length === 0) {
+                
+                        alert('Nincs elmentett e-mail cím.');
+       
+                        return;
+                     }
+
+                    // Kibontjuk a jsPDF objektumot a window.jspdf objektumból
+                        var { jsPDF } = window.jspdf;
+                    // Létrehozunk egy új jsPDF dokumentumot
+                    var doc = new jsPDF();
+                    // A dokumentum tetejére írjuk a "Email List" címet
+                    doc.text("Email List", 10, 10);
+                        // Az email címeket sorban hozzáadjuk a dokumentumhoz
+                    emailList.forEach(function(email, index) {
+                        // Minden email címet új sorba írunk a dokumentumban
+                    doc.text(email, 10, 20 + (index * 10));
+                    });
+                
+                    doc.save('email_list.pdf');
+                    }
+
+                
+    </script>
+</head>
+<body>
+    <div id="letolt" ondblclick="biztkerdes()"></div>
+    <div id="szoveg">
+        <p><br>Kedves Szülők, kedves Diákok!</p>
+        <p style="text-align: justify;">
+            <br>Varga Mártonnak hívnak, 21 éves, végzős közgazdász hallgató vagyok. Az egyetem kezdete óta foglalkozom oktatással, 
+           <br>évente több tucat diákot tanítok és készítek fel központi felvételi vizsgára, közép és emelt szintű érettségi vizsgára, 
+            valamint egyetemi zárthelyi vizsgákra is. Habár fő profilomnak továbbra is az emelt szintű érettségit, valamint az egyetemi 
+            matematika tárgyakat tekintem, úgy érzem, hogy az évek során sikerült kidolgoznom olyan módszereket, technikákat, praktikákat, 
+            amelyek alkalmazásával a 8. osztályos központi felvételi vizsga, valamint a középszintű érettségi trükkösebb feladati is
+             abszolválhatóvá válnak, illetve két olyan menetrendet/tematikát, amelyek mentén mindkét vizsgára fel tudom készíteni még a 
+            matematikát alapvetően nem kedvelő, kevésbé, vagy azt egyáltalán nem magáénak érző tanulókat is.<br>
+        </p>
+        <p style="text-align: justify;">
+            Az óráim iránt kialakult kereslet ébresztette bennem a gondolatot, hogy ezeket megpróbáljam a tanulók még szélesebb körének 
+            elérhetővé tenni anélkül, hogy az a hatékonyság rovására menne, így az ősszel induló tanévtől kezdve az utóbbi két vizsgára 
+            intenzív, kis csoportos (6-8 fő) felkészítő kurzusokat is indítok. Természetesen ettől függetlenül továbbra is szívesen 
+            vállalok olyan tanulókat, akik inkább az egyéni konzultációt, felkészítést tartják maguk számára testhezállónak.             
+            Az óráimról, kurzusaimról részletesebb információkat a megfelelő fül alatt olvashatnak.              
+            Amennyiben felkeltettem érdeklődésüket, kérem, iratkozzanak fel hírlevelemre. 
+        </p>
+        <label>E-mail cím megadása:
+            <input type="email" size="50px" id="bevitelimezo">
+        </label> 
+        <input type="button" value="Feliratkozás" style="width: 90px;" id="feliratkozas" onclick="save()">
+        
+        
+    </div>
+</body>
+</html>
