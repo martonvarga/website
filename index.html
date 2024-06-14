@@ -85,12 +85,12 @@
             border-bottom-style: none;
             border-right-style: none;
             display: flex;
-            justify-content: center;  
-            align-items: center;      
+            justify-content: center;  /* Vízszintes középre igazítás */
+            align-items: center;      /* Függőleges középre igazítás */
             transition: box-shadow 0.4s;
         }
         #menu_rolam {
-            border-bottom-style: solid;  
+            border-bottom-style: solid;  /* Az utolsó menüelem alsó szegélye */
         }
         
         #megjelenito {
@@ -101,42 +101,42 @@
             text-align: left;
         }
         #contact {
-            height: 15%;
+            height: 18%;
             width: 90%;
             box-sizing: border-box;
             float: left;
             text-align: center;
+            border-style: ;
         }
-        #contact p {
-            margin-bottom: 0.1em; 
-        }
-        #elkoszones {
-            height: 30%;
+        
+        #contact_keressenek {
+            height: 33%;
             width: 100%;
             box-sizing: border-box;
-            float: left;
+            padding:1%;
+			padding-left:8%;
         }
-        #tel {
-            height: 30%;
+        #contact_tel {
+            height: 33%;
             width: 100%;
             box-sizing: border-box;
-            float: left;
+           
         }
-        #email {
-            height: 30%;
+        #contact_mail {
+            height: 33%;
             width: 100%;
             box-sizing: border-box;
-            float: left;
+           
         }
         #floating_image {
             box-sizing: border-box;
-            position: absolute; 
-            top: 5%; 
-            right: 4.7%; 
-            z-index: 1; 
-            width: 15%; 
-            height: 30%; 
-            object-fit: cover; 
+            position: absolute; /* Abszolút pozícionálás */
+            top: 5%; /* A tartalom tetejétől való távolság */
+            right: 4.7%; /* A tartalom jobb oldalától való távolság */
+            z-index: 1; /* Nagy z-index érték, hogy minden más elem felett legyen */
+            width: 15%; /* Teljes szélesség kitöltése */
+            height: 30%; /* Teljes magasság kitöltése */
+            object-fit: cover; /* Az eredeti képarányok megőrzése */
         }
 
     </style>
@@ -222,12 +222,14 @@
 
 
     <div id="contact">
-        <p>Ha kérdésük merül föl, keressenek bátran a megadott e-mail címen vagy telefonszámon! Köszönöm, ha megtisztelnek bizalmukkal!</p> 
+        <div id="contact_keressenek"> Ha kérdésük merül föl, keressenek bátran a megadott e-mail címen vagy telefonszámon! Köszönöm, ha megtisztelnek bizalmukkal! </div>
         
-            <p> telefon:
-                <br>06 20 450 8521 </p>
-        <p>e-mail:
-            <br>vargamarton2002@icloud.com </p>
+        <div id="contact_tel"> telefon:
+                <br>06 20 450 8521 
+		</div>		
+        <div id="contact_mail">e-mail:
+            <br>vargamarton2002@icloud.com 
+		</div>
     </div>
    
     
