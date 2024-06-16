@@ -144,23 +144,23 @@
         }
         #floating_image {
             box-sizing: border-box;
-            position: absolute; /* Abszolút pozícionálás */
-            top: 5%; /* A tartalom tetejétől való távolság */
-            right: 4.7%; /* A tartalom jobb oldalától való távolság */
-            z-index: 1; /* Nagy z-index érték, hogy minden más elem felett legyen */
-            width: 15%; /* Teljes szélesség kitöltése */
-            height: 30%; /* Teljes magasság kitöltése */
-            object-fit: cover; /* Az eredeti képarányok megőrzése */
+            position: absolute; 
+            top: 5%; 
+            right: 4.7%; 
+            z-index: 1; 
+            width: 15%; 
+            height: 30%; 
+            object-fit: cover; 
         }
 	@media (max-width: 600px) {
             html, body {
-                font-size: 85%; /* Csökkentett betűméret */
+                font-size: 85%; 
             }
             #nev {
-                font-size: 300%; /* A név betűméretének csökkentése */
+                font-size: 300%; 
             }
             #titul, #contact_keressenek, #contact_tel, #contact_mail {
-                font-size: 90%; /* Egyéb szövegek betűméretének csökkentése */
+                font-size: 90%; 
             }
 	    #navigaCio {
                     
@@ -169,6 +169,9 @@
 	    #megjelenito {
                     width: 81%;
                 }
+	    #floating_image {
+		     height: 30%; 
+	    }
         }
 
     </style>
