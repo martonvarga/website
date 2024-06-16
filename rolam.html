@@ -18,11 +18,7 @@
             box-sizing: border-box;
             flex-direction: column;
         }
-        @media (max-width: 1600px), (max-height: 900px) {
-            html, body {
-                font-size: 95%; 
-                }
-        }
+        
         a{
             color: white;
         }
@@ -36,7 +32,14 @@
         }
     </style>
     <script>
-    
+        function setFontSize() {
+            var aspectRatio = window.innerWidth / window.innerHeight;
+            var fontSize = aspectRatio >= 16/9 ? '95%' : '105%';
+            document.documentElement.style.fontSize = fontSize;
+        }
+
+        window.addEventListener('resize', setFontSize);
+        window.addEventListener('DOMContentLoaded', setFontSize);
     </script>
 </head>
 <body>
