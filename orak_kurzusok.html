@@ -86,14 +86,23 @@
                 document.getElementById('bttn_kisCs').classList.add('active');
             }
         }
-        function setFontSize() {
-            var aspectRatio = window.innerWidth / window.innerHeight;
-            var fontSize = aspectRatio >= 16/9 ? '95%' : '105%';
-            document.documentElement.style.fontSize = fontSize;
-        }
+        window.addEventListener('resize', function() {
+    var viewportWidth = window.innerWidth;
+    var viewportHeight = window.innerHeight;
+    var aspectRatio = viewportWidth / viewportHeight;
 
-        window.addEventListener('resize', setFontSize);
-        window.addEventListener('DOMContentLoaded', setFontSize);
+    var defaultFontSize = 1.05; // 105%
+    var smallerAspectRatioThreshold = 16 / 9; // 16:9
+
+    if (aspectRatio <= smallerAspectRatioThreshold) {
+        document.body.style.fontSize = defaultFontSize + 'em';
+    } else {
+        document.body.style.fontSize = 0.92 + 'em'; // 92%
+    }
+});
+
+// Az oldal betöltésekor is meghívjuk a resize eseményt, hogy azonnal beállítsuk a megfelelő betűméretet
+window.dispatchEvent(new Event('resize'));
     </script>
 </head>
 <body>
