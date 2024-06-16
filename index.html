@@ -22,6 +22,7 @@
             padding: 0;
             color: white;
         }
+	    
         a {
             color: white;
         }
@@ -150,6 +151,17 @@
             width: 15%; /* Teljes szélesség kitöltése */
             height: 30%; /* Teljes magasság kitöltése */
             object-fit: cover; /* Az eredeti képarányok megőrzése */
+        }
+	@media (max-width: 600px) {
+            html, body {
+                font-size: 85%; /* Csökkentett betűméret */
+            }
+            #nev {
+                font-size: 300%; /* A név betűméretének csökkentése */
+            }
+            #titul, #contact_keressenek, #contact_tel, #contact_mail {
+                font-size: 90%; /* Egyéb szövegek betűméretének csökkentése */
+            }
         }
 
     </style>
