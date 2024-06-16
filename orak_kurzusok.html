@@ -18,10 +18,15 @@
             font-size: 105%;
             color: white;
         }
-        @media (max-width: 1600px), (max-height: 900px) {
+        @media (max-aspect-ratio: 16/9) {
             html, body {
-                font-size: 95%; 
-                }
+                font-size: 95%;
+            }
+        }
+        @media (min-aspect-ratio: 16/9) {
+            html, body {
+                font-size: 105%;
+            }
         }
         a {
             color: white;
