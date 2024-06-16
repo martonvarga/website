@@ -43,20 +43,14 @@
         }
     </style>
     <script>
-        window.addEventListener('resize', function() {
-    var viewportWidth = window.innerWidth;
-    var viewportHeight = window.innerHeight;
-    var aspectRatio = viewportWidth / viewportHeight;
+        function setFontSize() {
+            var aspectRatio = window.innerWidth / window.innerHeight;
+            var fontSize = aspectRatio >= 16/9 ? '92%' : '105%';
+            document.documentElement.style.fontSize = fontSize;
+        }
 
-    var defaultFontSize = 1.05; // 105%
-    var smallerAspectRatioThreshold = 16 / 9; // 16:9
-
-    if (aspectRatio <= smallerAspectRatioThreshold) {
-        document.body.style.fontSize = defaultFontSize + 'em';
-    } else {
-        document.body.style.fontSize = 0.92 + 'em'; // 92%
-    }
-});
+        window.addEventListener('resize', setFontSize);
+        window.addEventListener('DOMContentLoaded', setFontSize);
     </script>
 </head>
 <body>
