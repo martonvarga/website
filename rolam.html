@@ -43,7 +43,20 @@
         }
     </style>
     <script>
-        
+        window.addEventListener('resize', function() {
+    var viewportWidth = window.innerWidth;
+    var viewportHeight = window.innerHeight;
+    var aspectRatio = viewportWidth / viewportHeight;
+
+    var defaultFontSize = 1.05; // 105%
+    var smallerAspectRatioThreshold = 16 / 9; // 16:9
+
+    if (aspectRatio <= smallerAspectRatioThreshold) {
+        document.body.style.fontSize = defaultFontSize + 'em';
+    } else {
+        document.body.style.fontSize = 0.92 + 'em'; // 92%
+    }
+});
     </script>
 </head>
 <body>
