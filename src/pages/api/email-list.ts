@@ -1,10 +1,8 @@
 import mailchimp from "@mailchimp/mailchimp_marketing";
 
 mailchimp.setConfig({
-  apiKey: process.env.API_KEY,
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
   server: "us22",
-  // apiKey: "438a44f0015a5f90eba07a818ca6d341-us22",
-  // server: "us22",
 });
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -13,13 +11,10 @@ export default async (req: any, res: any) => {
     const { email_address } = req.body;
 
     try {
-      const response = await mailchimp.lists.addListMember(
-        process.env.AUDIENCE_LIST_ID!,
-        {
-          email_address,
-          status: "subscribed",
-        }
-      );
+      const response = await mailchimp.lists.addListMember("597607eaeb", {
+        email_address,
+        status: "subscribed",
+      });
       res.status(200).json({ success: true, response });
     } catch (error: any) {
       res.status(500).json(error.response.text);

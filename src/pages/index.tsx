@@ -26,7 +26,6 @@ export default function Home() {
   const { t } = useTranslation("common");
 
   async function onSubmit() {
-    console.log(email);
     if (email.trim() == "") {
       setErrorMessage(t("errors.mandatory_field"));
       return;
