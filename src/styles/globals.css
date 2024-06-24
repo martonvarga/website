@@ -32,6 +32,7 @@ header {
 
 /* Specific header styles */
 header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
@@ -44,6 +45,24 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  /* @media (max-width: 1024px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  } */
+}
+
+.header {
+  @media (max-width: 1024px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+.footer {
   @media (max-width: 1024px) {
     padding: 0 40px;
   }
@@ -54,6 +73,7 @@ header {
 
 /* Specific footer styles */
 footer {
+  display: flex;
   flex-direction: column;
   padding: 20px 80px;
   margin-top: 20px;
@@ -64,12 +84,12 @@ footer {
     rgba(44, 62, 80, 1) 85%,
     rgba(246, 246, 246, 1) 100%
   );
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
     padding: 15px 40px;
   }
   @media (max-width: 768px) {
     padding: 10px 20px;
-  }
+  } */
 }
 
 .navigation {

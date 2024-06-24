@@ -255,7 +255,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer id="contact">
+      <footer id="contact" className="footer">
         <h2 className="section-title">{t("footer.contact")}</h2>
         <div>
           <p className="contact-item">
