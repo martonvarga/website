@@ -28,11 +28,10 @@ a {
 footer,
 header {
   display: flex;
-  padding: 20px 80px;
 }
 
-header.header {
-  display: flex;
+/* Specific header styles */
+header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
@@ -53,8 +52,8 @@ header.header {
   }
 }
 
+/* Specific footer styles */
 footer {
-  display: flex;
   flex-direction: column;
   padding: 20px 80px;
   margin-top: 20px;
