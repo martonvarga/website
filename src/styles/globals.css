@@ -25,7 +25,13 @@ a {
   cursor: pointer;
 }
 
+footer,
 header {
+  display: flex;
+  padding: 20px 80px;
+}
+
+header.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
