@@ -128,7 +128,9 @@ export default function Home() {
             className="profile-picture"
           />
           <div className="hero-titles">
-            <h1 className="section-title-main">{t("hero.name")}</h1>
+            <h1 className="section-title-main hero-title-name">
+              {t("hero.name")}
+            </h1>
             <h2 className="section-title">{t("hero.title")}</h2>
             <div className="email-list-container">
               <h3 className="course-title">{t("hero.email_list_title")}</h3>
