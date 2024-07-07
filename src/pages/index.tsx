@@ -261,7 +261,7 @@ export default function Home() {
 
       <footer id="contact" className="footer">
         <h2 className="section-title">{t("footer.contact")}</h2>
-        <div>
+        <div className="contact-container">
           <p className="contact-item">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +274,7 @@ export default function Home() {
               <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
             </svg>
             {t("footer.email")}:
-            <a href="mailto:vargamarton2002@icloud.com">
+            <a href="mailto:vargamarton2002@icloud.com" className="wrap-text">
               vargamarton2002@icloud.com
             </a>
           </p>

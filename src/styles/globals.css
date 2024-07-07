@@ -10,6 +10,13 @@ html {
   font-family: "Hubot Sans";
 }
 
+html {
+  scroll-padding-top: 100px;
+  @media (max-device-width: 1024px) {
+    scroll-padding-top: 60px;
+  }
+}
+
 body {
   margin: 0;
   background-color: #f6f6f6;
@@ -65,7 +72,6 @@ header {
   }
 }
 
-/* Specific footer styles */
 footer {
   display: flex;
   flex-direction: column;
@@ -78,6 +84,13 @@ footer {
     rgba(44, 62, 80, 1) 85%,
     rgba(246, 246, 246, 1) 100%
   );
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .navigation {
@@ -343,61 +356,12 @@ footer {
   }
 }
 
-html {
-  scroll-padding-top: 100px;
-  @media (max-device-width: 1024px) {
-    scroll-padding-top: 60px;
-  }
-}
-
 .contact-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-header {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-}
-.hero {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-}
-.courses-classes {
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
-}
-.myself {
-  opacity: 0;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-footer {
-  opacity: 0;
-  animation: fadeIn 2.5s ease-in-out forwards;
-}
-
-/* .language-switcher {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  @media (max-device-width: 1024px) {
-    top: 10px;
-    right: 10px;
-  }
-} */
-
-/* .language-switcher-select {
-  font-size: 1.2rem;
-  @media (max-device-width: 1024px) {
-    font-size: 1rem;
-  }
-} */
 
 .language-switcher {
   display: flex;
@@ -429,4 +393,8 @@ footer {
 
 .language-switcher-select option {
   padding: 10px;
+}
+
+.wrap-text {
+  word-break: break-all;
 }
