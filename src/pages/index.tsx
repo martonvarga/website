@@ -203,11 +203,11 @@ export default function Home() {
                   "courses_classes.individual_classes.individual_course_duration"
                 )}
               </span>
-              <span>
+              {/* <span>
                 {t(
                   "courses_classes.individual_classes.individual_course_price"
                 )}
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
@@ -231,12 +231,14 @@ export default function Home() {
                   )}
                 </span>
                 <span>
+                  {" "}
                   |{" "}
                   {t(
                     "courses_classes.small_group_courses.small_group_courses_base_price"
                   )}
                 </span>
                 <span>
+                  {" "}
                   |{" "}
                   {t(
                     "courses_classes.small_group_courses.small_group_courses_discounted_price"
