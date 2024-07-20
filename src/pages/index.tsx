@@ -167,7 +167,7 @@ export default function Home() {
         <Image
           src={profilePicture}
           alt={"Profile picture"}
-          className="profile-picture mobile-profile-picture"
+          className="mobile-profile-picture"
         />
         <div className="hero-description-container">
           <p className="hero-description">{t("hero.myself_description_one")}</p>
