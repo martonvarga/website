@@ -128,7 +128,9 @@ export default function Home() {
             className="profile-picture"
           />
           <div className="hero-titles">
-            <h1 className="section-title-main">{t("hero.name")}</h1>
+            <h1 className="section-title-main hero-title-name">
+              {t("hero.name")}
+            </h1>
             <h2 className="section-title">{t("hero.title")}</h2>
             <div className="email-list-container">
               <h3 className="course-title">{t("hero.email_list_title")}</h3>
@@ -165,7 +167,7 @@ export default function Home() {
         <Image
           src={profilePicture}
           alt={"Profile picture"}
-          className="profile-picture mobile-profile-picture"
+          className="mobile-profile-picture"
         />
         <div className="hero-description-container">
           <p className="hero-description">{t("hero.myself_description_one")}</p>
@@ -201,11 +203,11 @@ export default function Home() {
                   "courses_classes.individual_classes.individual_course_duration"
                 )}
               </span>
-              <span>
+              {/* <span>
                 {t(
                   "courses_classes.individual_classes.individual_course_price"
                 )}
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
@@ -229,12 +231,14 @@ export default function Home() {
                   )}
                 </span>
                 <span>
+                  {" "}
                   |{" "}
                   {t(
                     "courses_classes.small_group_courses.small_group_courses_base_price"
                   )}
                 </span>
                 <span>
+                  {" "}
                   |{" "}
                   {t(
                     "courses_classes.small_group_courses.small_group_courses_discounted_price"
@@ -257,7 +261,7 @@ export default function Home() {
 
       <footer id="contact" className="footer">
         <h2 className="section-title">{t("footer.contact")}</h2>
-        <div>
+        <div className="contact-container">
           <p className="contact-item">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -270,7 +274,7 @@ export default function Home() {
               <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
             </svg>
             {t("footer.email")}:
-            <a href="mailto:vargamarton2002@icloud.com">
+            <a href="mailto:vargamarton2002@icloud.com" className="wrap-text">
               vargamarton2002@icloud.com
             </a>
           </p>

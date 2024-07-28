@@ -26,7 +26,7 @@ function App({ Component, pageProps }: AppProps) {
           crossOrigin=""
           type="font/woff2"
         />
-        <title>Varga Márton Magántanár</title>
+        <title>Varga Márton magántanár</title>
       </Head>
       <Component {...pageProps} />
     </>

@@ -10,6 +10,13 @@ html {
   font-family: "Hubot Sans";
 }
 
+html {
+  scroll-padding-top: 60px;
+  @media (min-device-width: 1024px) {
+    scroll-padding-top: 100px;
+  }
+}
+
 body {
   margin: 0;
   background-color: #f6f6f6;
@@ -35,7 +42,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 80px;
+  /*mobile*/
+  padding: 0 20px;
   background: rgb(44, 62, 80);
   background: linear-gradient(
     180deg,
@@ -48,28 +56,29 @@ header {
 }
 
 .header {
-  @media (max-device-width: 1024px) {
+  @media (min-device-width: 768px) {
+    /*tablet*/
     padding: 0 40px;
   }
-  @media (max-device-width: 768px) {
-    padding: 0 20px;
+  @media (min-device-width: 1024px) {
+    /*desktop*/
+    padding: 20px 80px;
   }
 }
 
 .footer {
-  @media (max-device-width: 1024px) {
-    padding: 0 40px;
+  @media (min-device-width: 768px) {
+    padding: 20px 40px;
   }
-  @media (max-device-width: 768px) {
-    padding: 0 20px;
+  @media (min-device-width: 1024px) {
+    padding: 20px 80px;
   }
 }
 
-/* Specific footer styles */
 footer {
   display: flex;
   flex-direction: column;
-  padding: 20px 80px;
+  padding: 10px 20px;
   margin-top: 20px;
   color: white;
   background: rgb(44, 62, 80);
@@ -80,10 +89,40 @@ footer {
   );
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .navigation {
   @media (max-device-width: 1024px) {
     display: none;
   }
+}
+
+.mobile-menu {
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  color: white;
+  background-color: rgba(44, 62, 80, 1);
+}
+
+.mobile-nav-links li {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgb(170, 170, 170);
+}
+
+.mobile-menu {
+  display: block;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: slideDown 0.8s ease-out forwards;
 }
 
 .logo {
@@ -99,18 +138,19 @@ footer {
   gap: 40px;
 }
 
-.profile-picture {
+.mobile-profile-picture {
+  display: block;
   width: 300px;
   height: 450px;
   object-fit: cover;
-  @media (max-device-width: 768px) {
+  @media (min-device-width: 768px) {
     display: none;
   }
 }
 
-.mobile-profile-picture {
+.profile-picture {
   display: none;
-  @media (max-device-width: 768px) {
+  @media (min-device-width: 768px) {
     display: block;
     width: 300px;
     height: 450px;
@@ -268,6 +308,10 @@ footer {
   font-weight: 500;
 }
 
+.hero-title-name {
+  font-size: 2rem;
+}
+
 .section-title {
   font-weight: 400;
 }
@@ -289,32 +333,10 @@ footer {
 }
 
 .hamburger-menu-btn {
-  display: none;
   cursor: pointer;
-  @media (max-device-width: 1024px) {
-    display: block;
-  }
-}
-
-.mobile-menu {
-  display: none;
-}
-
-@media (max-device-width: 1024px) {
-  .mobile-menu {
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    color: white;
-    background-color: rgba(44, 62, 80, 1);
-  }
-
-  .mobile-nav-links li {
-    text-align: center;
-    padding: 15px 0;
-    border-top: 1px solid rgb(170, 170, 170);
+  display: block;
+  @media (min-device-width: 1024px) {
+    display: none;
   }
 }
 
@@ -329,71 +351,12 @@ footer {
   }
 }
 
-.mobile-menu {
-  display: none;
-  @media (max-device-width: 1024px) {
-    display: block;
-    opacity: 0;
-    transform: translateY(-100%);
-    animation: slideDown 0.8s ease-out forwards;
-  }
-}
-
-html {
-  scroll-padding-top: 100px;
-  @media (max-device-width: 1024px) {
-    scroll-padding-top: 60px;
-  }
-}
-
 .contact-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-header {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-}
-.hero {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-}
-.courses-classes {
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
-}
-.myself {
-  opacity: 0;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-footer {
-  opacity: 0;
-  animation: fadeIn 2.5s ease-in-out forwards;
-}
-
-/* .language-switcher {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  @media (max-device-width: 1024px) {
-    top: 10px;
-    right: 10px;
-  }
-} */
-
-/* .language-switcher-select {
-  font-size: 1.2rem;
-  @media (max-device-width: 1024px) {
-    font-size: 1rem;
-  }
-} */
 
 .language-switcher {
   display: flex;
@@ -425,4 +388,8 @@ footer {
 
 .language-switcher-select option {
   padding: 10px;
+}
+
+.wrap-text {
+  word-break: break-all;
 }
