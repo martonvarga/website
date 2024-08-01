@@ -424,3 +424,8 @@ html {
 .wrap-text {
   word-break: break-all;
 }
+
+p,
+span {
+  text-align: justify;
+}
