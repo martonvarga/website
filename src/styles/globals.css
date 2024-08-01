@@ -430,6 +430,5 @@ footer {
 
 p,
 span {
-  text-align: justify;
-  word-break: break-all;
+  text-align: left;
 }
