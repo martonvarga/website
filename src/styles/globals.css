@@ -431,4 +431,5 @@ footer {
 p,
 span {
   text-align: justify;
+  word-break: break-all;
 }
