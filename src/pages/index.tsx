@@ -53,6 +53,7 @@ export default function Home() {
       setErrorMessage(t("errors.general"));
       return;
     }
+    setErrorMessage("");
     setSuccessMessage(t("errors.success"));
     setEmail("");
   }
@@ -101,7 +102,7 @@ export default function Home() {
           </nav>
         )}
 
-        <nav className="navigation">
+        {<nav className="navigation">
           <ul className="nav-links">
             <li>
               <a href="#introduction">{t("navigation.introduction")}</a>
@@ -117,7 +118,7 @@ export default function Home() {
             </li>
             <LanguageSwitcher />
           </ul>
-        </nav>
+        </nav>}
       </header>
 
       <section id="introduction" className="hero">
