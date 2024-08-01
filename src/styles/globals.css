@@ -164,13 +164,17 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px 20px;
+}
 
-  padding: 30px 80px;
-  @media (max-device-width: 1024px) {
+.hero {
+  @media (min-device-width: 768px) {
+    /*tablet*/
     padding: 15px 40px;
   }
-  @media (max-device-width: 768px) {
-    padding: 10px 20px;
+  @media (min-device-width: 1024px) {
+    /*desktop*/
+    padding: 30px 80px;
   }
 }
 
@@ -179,13 +183,18 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-bottom: 20px;
 
-  @media (max-device-width: 1024px) {
+  padding-bottom: 10px;
+}
+
+.hero-content {
+  @media (min-device-width: 768px) {
+    /*tablet*/
     padding-bottom: 15px;
   }
-  @media (max-device-width: 768px) {
-    padding-bottom: 10px;
+  @media (min-device-width: 1024px) {
+    /*desktop*/
+    padding-bottom: 20px;
   }
 }
 
@@ -205,8 +214,9 @@ footer {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  @media (max-device-width: 768px) {
-    flex-direction: column;
+  flex-direction: column;
+  @media (min-device-width: 768px) {
+    flex-direction: row;
   }
 }
 
@@ -285,23 +295,33 @@ footer {
   gap: 20px;
   background: #3e588b;
   color: white;
-  padding: 30px 80px;
-  @media (max-device-width: 1024px) {
+  padding: 10px 20px;
+}
+
+.courses-classes {
+  @media (min-device-width: 768px) {
+    /*tablet*/
     padding: 15px 40px;
   }
-  @media (max-device-width: 768px) {
-    padding: 10px 20px;
+  @media (min-device-width: 1024px) {
+    /*desktop*/
+    padding: 30px 80px;
   }
 }
 
 .myself {
   line-height: 1.5;
-  padding: 30px 80px;
-  @media (max-device-width: 1024px) {
+  padding: 10px 20px;
+}
+
+.courses-classes {
+  @media (min-device-width: 768px) {
+    /*tablet*/
     padding: 15px 40px;
   }
-  @media (max-device-width: 768px) {
-    padding: 10px 20px;
+  @media (min-device-width: 1024px) {
+    /*desktop*/
+    padding: 30px 80px;
   }
 }
 
@@ -376,9 +396,9 @@ footer {
 }
 
 html {
-  scroll-padding-top: 100px;
-  @media (max-device-width: 1024px) {
-    scroll-padding-top: 60px;
+  scroll-padding-top: 60px;
+  @media (min-device-width: 1024px) {
+    scroll-padding-top: 100px;
   }
 }
 
