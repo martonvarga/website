@@ -183,19 +183,6 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
-  padding-bottom: 10px;
-}
-
-.hero-content {
-  @media (min-device-width: 768px) {
-    /*tablet*/
-    padding-bottom: 15px;
-  }
-  @media (min-device-width: 1024px) {
-    /*desktop*/
-    padding-bottom: 20px;
-  }
 }
 
 .hero-titles {
@@ -314,7 +301,7 @@ footer {
   padding: 10px 20px;
 }
 
-.courses-classes {
+.myself {
   @media (min-device-width: 768px) {
     /*tablet*/
     padding: 15px 40px;
