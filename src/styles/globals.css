@@ -97,8 +97,9 @@ footer {
 }
 
 .navigation {
-  @media (max-device-width: 1024px) {
-    display: none;
+  display: none;
+  @media (min-device-width: 1024px) {
+    display: block;
   }
 }
 
@@ -340,6 +341,22 @@ footer {
   }
 }
 
+.mobile-menu {
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  color: white;
+  background-color: rgba(44, 62, 80, 1);
+}
+
+.mobile-nav-links li {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid rgb(170, 170, 170);
+}
+
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
@@ -348,6 +365,20 @@ footer {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+.mobile-menu {
+  display: block;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+html {
+  scroll-padding-top: 100px;
+  @media (max-device-width: 1024px) {
+    scroll-padding-top: 60px;
   }
 }
 
