@@ -164,17 +164,18 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Initial padding */
 }
 
-.hero {
-  @media (min-device-width: 768px) {
-    /*tablet*/
-    padding: 15px 40px;
+@media (min-device-width: 768px) {
+  .hero {
+    padding: 15px 40px; /* Overrides the previous padding for wider screens */
   }
-  @media (min-device-width: 1024px) {
-    /*desktop*/
-    padding: 30px 80px;
+}
+
+@media (min-device-width: 1024px) {
+  .hero {
+    padding: 20px 80px; /* Overrides the previous padding for even wider screens */
   }
 }
 
@@ -285,14 +286,15 @@ footer {
   padding: 10px 20px;
 }
 
-.courses-classes {
-  @media (min-device-width: 768px) {
-    /*tablet*/
-    padding: 15px 40px;
+@media (min-device-width: 768px) {
+  .courses-classes {
+    padding: 15px 40px; /* Overrides the previous padding for wider screens */
   }
-  @media (min-device-width: 1024px) {
-    /*desktop*/
-    padding: 30px 80px;
+}
+
+@media (min-device-width: 1024px) {
+  .courses-classes {
+    padding: 20px 80px; /* Overrides the previous padding for even wider screens */
   }
 }
 
@@ -301,14 +303,15 @@ footer {
   padding: 10px 20px;
 }
 
-.myself {
-  @media (min-device-width: 768px) {
-    /*tablet*/
-    padding: 15px 40px;
+@media (min-device-width: 768px) {
+  .myself {
+    padding: 15px 40px; /* Overrides the previous padding for wider screens */
   }
-  @media (min-device-width: 1024px) {
-    /*desktop*/
-    padding: 30px 80px;
+}
+
+@media (min-device-width: 1024px) {
+  .myself {
+    padding: 20px 80px; /* Overrides the previous padding for even wider screens */
   }
 }
 
@@ -380,13 +383,6 @@ footer {
   opacity: 0;
   transform: translateY(-100%);
   animation: slideDown 0.8s ease-out forwards;
-}
-
-html {
-  scroll-padding-top: 60px;
-  @media (min-device-width: 1024px) {
-    scroll-padding-top: 100px;
-  }
 }
 
 .contact-item {
