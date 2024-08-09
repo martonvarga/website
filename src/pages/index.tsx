@@ -58,6 +58,11 @@ export default function Home() {
     setEmail("");
   }
 
+  function handleMobileMenuItemOnClick(route: string) {
+    window.location.href=`#${route}`
+    setIsMobilemenuOpen(false)
+  }
+
   return (
     <>
       <header className="header">
@@ -86,16 +91,16 @@ export default function Home() {
           <nav className="mobile-menu" id="mobile-menu">
             <ul className="mobile-nav-links">
               <li>
-                <a href="#introduction">{t("navigation.introduction")}</a>
+                <a onClick={() => handleMobileMenuItemOnClick("introduction")}>{t("navigation.introduction")}</a>
               </li>
               <li>
-                <a href="#courses-classes">{t("navigation.courses_classes")}</a>
+                <a onClick={() => handleMobileMenuItemOnClick("courses-classes")}>{t("navigation.courses_classes")}</a>
               </li>
               <li>
-                <a href="#myself">{t("navigation.myself")}</a>
+                <a onClick={() => handleMobileMenuItemOnClick("myself")}>{t("navigation.myself")}</a>
               </li>
               <li>
-                <a href="#contact">{t("navigation.contact")}</a>
+                <a onClick={() => handleMobileMenuItemOnClick("contact")}>{t("navigation.contact")}</a>
               </li>
               <LanguageSwitcher />
             </ul>
@@ -204,11 +209,6 @@ export default function Home() {
                   "courses_classes.individual_classes.individual_course_duration"
                 )}
               </span>
-              {/* <span>
-                {t(
-                  "courses_classes.individual_classes.individual_course_price"
-                )}
-              </span> */}
             </div>
           </div>
         </div>
@@ -256,7 +256,9 @@ export default function Home() {
           {t("myself.main_title")}
         </h2>
         <div>
-          <p>{t("myself.description")}</p>
+          <p>{t("myself.description1")}</p>
+          <p>{t("myself.description2")}</p>
+          <p>{t("myself.description3")}</p>
         </div>
       </section>
 
