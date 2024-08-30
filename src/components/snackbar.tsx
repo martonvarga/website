@@ -1,6 +1,4 @@
-import { t } from "i18next";
-import { Dispatch, SetStateAction, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Dispatch, SetStateAction } from "react";
 
 type SnackBarProps = {
   text: string;
@@ -8,8 +6,6 @@ type SnackBarProps = {
 };
 
 function SnackBar({ text, setShowSnackBar }: SnackBarProps) {
-  const { t } = useTranslation("common");
-
   function onClose() {
     setShowSnackBar(false);
   }
