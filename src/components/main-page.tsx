@@ -185,6 +185,15 @@ export default function MainPage() {
                   {t("navigation.contact")}
                 </a>
               </li>
+              <li>
+                <a
+                  onClick={() =>
+                    handleMobileMenuItemOnClick("next-group-courses")
+                  }
+                >
+                  {t("navigation.courses")}
+                </a>
+              </li>
               <LanguageSwitcher />
             </ul>
           </nav>
@@ -206,7 +215,7 @@ export default function MainPage() {
                 <a href="#contact">{t("navigation.contact")}</a>
               </li>
               <li>
-                <a href="#next-group-courses">{t("navigation.contact")}</a>
+                <a href="#next-group-courses">{t("navigation.courses")}</a>
               </li>
               <LanguageSwitcher />
             </ul>
