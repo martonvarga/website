@@ -10,7 +10,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Varga Márton magántanár weboldala. Matematika vizsgafelkészítés és magánoktatás."
+          content="Elindult a jelentkezés a központi felvételire felkészítő kurzusaimra! A helyek korlátozott számban elérhetőek, ne maradj le, jelentkezz mihamarabb!"
         />
         <meta
           name="keywords"

@@ -49,5 +49,38 @@
     "wrong_email_format": "Helytelen email cím formátum.",
     "general": "Hiba történt, próbálja újra.",
     "success": "Sikeresen feliratkoztál."
+  },
+  "course_options_list": {
+    "title": "A felvételire felkészítő kurzusok idősávjai:",
+    "days": {
+      "tuesday": "Kedd",
+      "thursday": "Csütörtök",
+      "saturday": "Szombat",
+      "sunday": "Vasárnap"
+    },
+    "personal": "Személyes",
+    "online": "Online"
+  },
+  "form": {
+    "first_name": "Vezetéknév",
+    "last_name": "Keresztnév",
+    "email": "Email",
+    "course": "Válassz a kurzusok közül"
+  },
+  "course_options": {
+    "first": "Kedd 16:00-17:30 Személyes",
+    "second": "Kedd 18:00-19:30 Online",
+    "third": "Csütörtök 16:00-17:30 Személyes",
+    "fourth": "Csütörtök 18:00-19:30 Online",
+    "fifth": "Szombat 10:00-11:30 Személyes",
+    "sixth": "Vasárnap 10:00-11:30 Online"
+  },
+  "group_courses_texts": {
+    "first": "Az összes kurzus az október 14-ével kezdődő héten indul és a tanítási szüneteket leszámítva minden héten, a megfelelő időpontban lesznek megtartva az órák. Jelentkezni október 13. éjfélig lehet.",
+    "second": "További információkat a jelentkezést követően, e-mailben fogok küldeni. Találkozzunk az órákon, és hozzuk ki együtt a legtöbbet a rettegett felvételiből!"
+  },
+  "sign_up": "Jelentkezek",
+  "snackbar": {
+    "success": "Sikeresen jelentkeztél a kurzusra!"
   }
 }
