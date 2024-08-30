@@ -3,10 +3,35 @@
 import Image from "next/image";
 import profilePicture from "../../public/images/vargamarton.webp";
 import logo from "../../public/images/logo.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import LanguageSwitcher from "@/components/language-switcher";
+import Input from "@/components/input";
+import SnackBar from "@/components/snackbar";
+
+enum CourseType {
+  KEDD_PERSONAL_16_00_17_30 = "Kedd 16:00-17:30 Személyes",
+  KEDD_ONLINE_18_00_19_30 = "Kedd 18:00-19:30 Online",
+  CSUTORTOK_PERSONAL_16_00_17_30 = "Csütörtök 16:00-17:30 Személyes",
+  CSUTORTOK_ONLINE_18_00_19_30 = "Csütörtök 18:00-19:30 Online",
+  SZOMBAT_PERSONAL_10_00_11_30 = "Szombat 10:00-11:30 Személyes",
+  VASARNAP_ONLINE_10_00_11_30 = "Vasárnap 10:00-11:30 Online",
+}
+
+type CourseSignUpFormType = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  course: CourseType | "";
+};
+
+const defaultSignUpToCourseFormValues: CourseSignUpFormType = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  course: "",
+};
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -23,7 +48,34 @@ export default function Home() {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
+  const [signUpCourseFormValues, setSignUpCourseFormValues] =
+    useState<CourseSignUpFormType>(defaultSignUpToCourseFormValues);
+
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [showSnackBar, setShowSnackBar] = useState(false);
+
+  useEffect(() => {
+    const allFieldsFilled = Object.values(signUpCourseFormValues).every(
+      (value) => value.trim() !== ""
+    );
+
+    setIsButtonDisabled(!allFieldsFilled);
+  }, [signUpCourseFormValues]);
+
+  useEffect(() => {
+    console.log({ showSnackBar });
+  }, [showSnackBar]);
+
   const { t } = useTranslation("common");
+
+  function onSignUpValueChange(
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) {
+    setSignUpCourseFormValues({
+      ...signUpCourseFormValues,
+      [event.target.name]: event.target.value,
+    });
+  }
 
   async function onSubmit() {
     if (email.trim() == "") {
@@ -46,6 +98,7 @@ export default function Home() {
         merge_fields: {
           FNAME: name,
         },
+        tags: ["subscriber"],
       }),
     });
 
@@ -59,8 +112,38 @@ export default function Home() {
   }
 
   function handleMobileMenuItemOnClick(route: string) {
-    window.location.href=`#${route}`
-    setIsMobilemenuOpen(false)
+    window.location.href = `#${route}`;
+    setIsMobilemenuOpen(false);
+  }
+
+  async function onSubmitSignUpForm(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const response = await fetch("/api/sign-up-to-course", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email_address: signUpCourseFormValues.email,
+        status: "subscribed",
+        merge_fields: {
+          FNAME:
+            signUpCourseFormValues.firstName +
+            " " +
+            signUpCourseFormValues.lastName,
+        },
+        tags: [signUpCourseFormValues.course],
+      }),
+    });
+
+    if (response.status == 500) {
+      setErrorMessage(t("errors.general"));
+      return;
+    }
+
+    setShowSnackBar(true);
+    setSignUpCourseFormValues(defaultSignUpToCourseFormValues);
   }
 
   return (
@@ -91,40 +174,58 @@ export default function Home() {
           <nav className="mobile-menu" id="mobile-menu">
             <ul className="mobile-nav-links">
               <li>
-                <a onClick={() => handleMobileMenuItemOnClick("introduction")}>{t("navigation.introduction")}</a>
+                <a onClick={() => handleMobileMenuItemOnClick("introduction")}>
+                  {t("navigation.introduction")}
+                </a>
               </li>
               <li>
-                <a onClick={() => handleMobileMenuItemOnClick("courses-classes")}>{t("navigation.courses_classes")}</a>
+                <a
+                  onClick={() => handleMobileMenuItemOnClick("courses-classes")}
+                >
+                  {t("navigation.courses_classes")}
+                </a>
               </li>
               <li>
-                <a onClick={() => handleMobileMenuItemOnClick("myself")}>{t("navigation.myself")}</a>
+                <a onClick={() => handleMobileMenuItemOnClick("myself")}>
+                  {t("navigation.myself")}
+                </a>
               </li>
               <li>
-                <a onClick={() => handleMobileMenuItemOnClick("contact")}>{t("navigation.contact")}</a>
+                <a onClick={() => handleMobileMenuItemOnClick("contact")}>
+                  {t("navigation.contact")}
+                </a>
               </li>
               <LanguageSwitcher />
             </ul>
           </nav>
         )}
 
-        {<nav className="navigation">
-          <ul className="nav-links">
-            <li>
-              <a href="#introduction">{t("navigation.introduction")}</a>
-            </li>
-            <li>
-              <a href="#courses-classes">{t("navigation.courses_classes")}</a>
-            </li>
-            <li>
-              <a href="#myself">{t("navigation.myself")}</a>
-            </li>
-            <li>
-              <a href="#contact">{t("navigation.contact")}</a>
-            </li>
-            <LanguageSwitcher />
-          </ul>
-        </nav>}
+        {
+          <nav className="navigation">
+            <ul className="nav-links">
+              <li>
+                <a href="#introduction">{t("navigation.introduction")}</a>
+              </li>
+              <li>
+                <a href="#courses-classes">{t("navigation.courses_classes")}</a>
+              </li>
+              <li>
+                <a href="#myself">{t("navigation.myself")}</a>
+              </li>
+              <li>
+                <a href="#contact">{t("navigation.contact")}</a>
+              </li>
+              <LanguageSwitcher />
+            </ul>
+          </nav>
+        }
       </header>
+      {showSnackBar && (
+        <SnackBar
+          text={t("snackbar.success")}
+          setShowSnackBar={setShowSnackBar}
+        />
+      )}
 
       <section id="introduction" className="hero">
         <div className="hero-content">
@@ -248,6 +349,94 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="courses-details">
+          <ul>
+            <li>{t("course_options_list.title")}</li>
+            <br />
+            <li>
+              {t("course_options_list.days.tuesday")}:
+              <ol>
+                <li>16:00-17:30 {t("course_options_list.personal")}</li>
+                <li>18:00-19:30 {t("course_options_list.online")}</li>
+              </ol>
+            </li>
+            <li>
+              {t("course_options_list.days.thursday")}:
+              <ol>
+                <li>16:00-17:30 {t("course_options_list.personal")}</li>
+                <li>18:00-19:30 {t("course_options_list.online")}</li>
+              </ol>
+            </li>
+            <li>
+              {t("course_options_list.days.saturday")}:
+              <ol>
+                <li>10:00-11:30 {t("course_options_list.personal")}</li>
+              </ol>
+            </li>
+            <li>
+              {t("course_options_list.days.sunday")}:
+              <ol>
+                <li>10:00-11:30 {t("course_options_list.online")}</li>
+              </ol>
+            </li>
+          </ul>
+          <p>{t("group_courses_texts.first")}</p>
+          <p>{t("group_courses_texts.second")}</p>
+        </div>
+
+        <div className="course-sign-up-container">
+          <form action="submit" onSubmit={onSubmitSignUpForm}>
+            <Input
+              name="firstName"
+              type="text"
+              label={t("form.first_name")}
+              value={signUpCourseFormValues.firstName}
+              onChange={onSignUpValueChange}
+              className="sign-up-form-input"
+            />
+            <Input
+              name="lastName"
+              type="text"
+              label={t("form.last_name")}
+              value={signUpCourseFormValues.lastName}
+              onChange={onSignUpValueChange}
+              className="sign-up-form-input"
+            />
+            <Input
+              name="email"
+              type="email"
+              label={t("form.email")}
+              value={signUpCourseFormValues.email}
+              onChange={onSignUpValueChange}
+              className="sign-up-form-input"
+            />
+            <label>
+              {t("form.course")}
+              <select
+                name="course"
+                value={signUpCourseFormValues.course}
+                onChange={onSignUpValueChange}
+                className="courses-options-dropdown"
+              >
+                <option value="">{""}</option>
+                <option value="SZ1">{t("course_options.first")}</option>
+                <option value="O1">{t("course_options.second")}</option>
+                <option value="SZ2">{t("course_options.third")}</option>
+                <option value="O2">{t("course_options.fourth")}</option>
+                <option value="SZ3">{t("course_options.fifth")}</option>
+                <option value="O3">{t("course_options.sixth")}</option>
+              </select>
+            </label>
+
+            <button
+              type="submit"
+              disabled={isButtonDisabled}
+              className="sign-up-form-submit-button"
+            >
+              {t("sign_up")}
+            </button>
+          </form>
         </div>
       </section>
 
