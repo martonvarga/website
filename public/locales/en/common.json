@@ -36,8 +36,7 @@
     "description2": "Together with a classmate, I wrote a thesis for the Scientific Student Association competition in the statistics and econometrics section, and our work was nominated by the jury for the national round. Additionally, I worked as a teaching assistant in econometrics for two semesters, helping with grading assignments and conducting review sessions to prepare students for exams.",
     "description3": "I have been involved in teaching mathematics since the start of my university studies, and during the summers, I also work on decoration projects, primarily for events. In my free time, I enjoy spending time with my family and friends, as well as engaging in sports. Up until high school graduation, I played basketball competitively, but now I prefer running and swimming. I often spend summers at our family vacation home in the Danube Bend; there, I find true relaxation and rejuvenation in gardening, barbecuing with friends, and playing ping pong."
   },
-  
-  
+
   "footer": {
     "contact": "Contact",
     "email": "Email",
@@ -52,5 +51,38 @@
     "wrong_email_format": "Incorrect email address format.",
     "general": "An error occurred, please try again.",
     "success": "You have successfully subscribed."
+  },
+  "course_options_list": {
+    "title": "The time slots of the preparatory courses for admission:",
+    "days": {
+      "tuesday": "Tuesday",
+      "thursday": "Thursday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "personal": "Personal",
+    "online": "Online"
+  },
+  "form": {
+    "first_name": "First name",
+    "last_name": "Last name",
+    "email": "Email",
+    "course": "Choose from the available courses"
+  },
+  "course_options": {
+    "first": "Tuesday 16:00-17:30 Személyes",
+    "second": "Tuesday 18:00-19:30 Online",
+    "third": "Thursday 16:00-17:30 Személyes",
+    "fourth": "Thursday 18:00-19:30 Online",
+    "fifth": "Saturday 10:00-11:30 Személyes",
+    "sixth": "Sunday 10:00-11:30 Online"
+  },
+  "group_courses_texts": {
+    "first": "All courses will start during the week starting with October 14 and the lessons will be held every week at the appointed times, except school holidays. The deadline to apply is midnight on October 13.",
+    "second": "Further information will be sent via email after registration. I look forward to seeing you in class, and together, let’s make the most of the dreaded entrance exam!"
+  },
+  "sign_up": "Sign Up",
+  "snackbar": {
+    "success": "You have successfully subscribed!"
   }
 }
