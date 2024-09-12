@@ -333,9 +333,9 @@ export default function MainPage() {
             </h3>
             <div className="course-details-container">
               <p>
-                {t(
-                  "courses_classes.small_group_courses.small_group_courses_description"
-                )}
+                {
+                  <Trans i18nKey="courses_classes.small_group_courses.small_group_courses_description" />
+                }
               </p>
               <div className="course-info">
                 <span>

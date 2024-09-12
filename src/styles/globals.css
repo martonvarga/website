@@ -201,7 +201,6 @@ footer {
 .hero-description-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 
 .email-list-form {
