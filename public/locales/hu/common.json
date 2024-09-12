@@ -11,8 +11,8 @@
     "title": "matematika vizsgafelkészítés és magánoktatás",
     "email_list_title": "További információkért iratkozz fel hírlevelemre.",
     "subscribe": "Feliratkozom",
-    "myself_description_one": "Varga Mártonnak hívnak, 22 éves, frissen diplomázott közgazdász vagyok. Az egyetem kezdete óta foglalkozom oktatással, évente több tucat diákot tanítok és készítek fel központi felvételi vizsgára, közép és emelt szintű érettségi vizsgára, valamint egyetemi zárthelyi vizsgákra is. Habár fő profilomnak továbbra is az emelt szintű érettségit, valamint az egyetemi matematika tárgyakat tekintem, úgy érzem, hogy az évek során sikerült kidolgoznom olyan módszereket, technikákat, praktikákat, amelyek alkalmazásával a 8. osztályos központi felvételi vizsga, valamint a középszintű érettségi trükkösebb feladati is abszolválhatóvá válnak, illetve két olyan menetrendet/tematikát, amelyek mentén mindkét vizsgára fel tudom készíteni még a matematikát alapvetően nem kedvelő, kevésbé, vagy egyáltalán nem magáénak érző tanulókat is.",
-    "myself_description_two": "Az óráim iránt kialakult kereslet ébresztette bennem a gondolatot, hogy ezeket megpróbáljam a tanulók még szélesebb körének elérhetővé tenni anélkül, hogy az a hatékonyság rovására menne. Így az ősszel induló tanévtől kezdve az utóbbi két vizsgára intenzív, kis csoportos (6-8 fő) felkészítő kurzusokat is indítok. Természetesen ettől függetlenül továbbra is szívesen vállalok olyan tanulókat, akik inkább az egyéni konzultációt, felkészítést tartják maguk számára testhezállónak. Az óráimról, kurzusaimról részletesebb információkat a megfelelő fül alatt olvashatnak. Amennyiben felkeltettem érdeklődésüket, kérem, iratkozzanak fel hírlevelemre."
+    "myself_description_one": "Varga Mártonnak hívnak, 22 éves, frissen diplomázott közgazdász vagyok. Az egyetem kezdete óta foglalkozom oktatással, évente több tucat diákot tanítok és készítek fel központi felvételi vizsgára, közép és emelt szintű érettségi vizsgára, valamint egyetemi zárthelyi vizsgákra is. <1/>Habár fő profilomnak továbbra is az emelt szintű érettségit, valamint az egyetemi matematika tárgyakat tekintem, úgy érzem, hogy az évek során sikerült kidolgoznom olyan módszereket, technikákat, praktikákat, amelyek alkalmazásával a <strong>8. osztályos központi felvételi vizsga</strong>, valamint a <strong>középszintű érettségi</strong> trükkösebb feladati is abszolválhatóvá válnak, illetve két olyan menetrendet/tematikát, amelyek mentén mindkét vizsgára fel tudom készíteni még a matematikát alapvetően nem kedvelő, kevésbé, vagy egyáltalán nem magáénak érző tanulókat is.",
+    "myself_description_two": "Az óráim iránt kialakult kereslet ébresztette bennem a gondolatot, hogy ezeket megpróbáljam a tanulók még szélesebb körének elérhetővé tenni anélkül, hogy az a hatékonyság rovására menne. Így az ősszel induló tanévtől kezdve az utóbbi két vizsgára intenzív, <strong>kis csoportos (6-8 fő) felkészítő kurzusokat</strong> is indítok. Természetesen ettől függetlenül továbbra is szívesen vállalok olyan tanulókat, akik inkább az egyéni konzultációt, felkészítést tartják maguk számára testhezállónak. Az óráimról, kurzusaimról részletesebb információkat a megfelelő fül alatt olvashatnak. Amennyiben felkeltettem érdeklődésüket, kérem, iratkozzanak fel hírlevelemre."
   },
   "courses_classes": {
     "main_title": "Órák/Kurzusok",
@@ -24,10 +24,10 @@
     },
     "small_group_courses": {
       "small_group_courses_title": "Kiscsoportos kurzusok",
-      "small_group_courses_description": "A 8. osztályos központi felvételire és a középszintű érettségire csoportos, 6-8 fős, vizsgafelkészítő kurzusokat is indítok. Célzottan a vizsgák típusfeladataira, témakörök szerint haladva, intenzíven, egy 10 hetes tanfolyam keretében készítem fel a tanulókat a megmérettetésre. A 8.-os felvételire felkészítő kurzusok lehetséges idősávairól a nyár végén, ezen a felületen fogok közzétenni információkat, és augusztus 31.-től lesz lehetőség jelentkezni rájuk.",
+      "small_group_courses_description": "A <strong>8. osztályos központi felvételire</strong> és a <strong>középszintű érettségire</strong> csoportos, 6-8 fős, <strong>vizsgafelkészítő kurzusokat</strong> is indítok. Célzottan a vizsgák típusfeladataira, intenzíven, egy <strong>10 hetes tanfolyam</strong> keretében készítem fel a tanulókat a megmérettetésre. Nem csupán feladatlapokat fogunk kitölteni, hanem ennél jóval hatékonyabban, témakörök szerint haladva, az általam kidolgozott tanagyagot és tematikát követve fogunk együtt mindent megtanulni, ami a sikeres vizsgához szükséges.",
       "small_group_courses_duration": "10 héten keresztül heti egy 90 perces alkalom",
-      "small_group_courses_base_price": "Alapár: 60 000 Ft (3000 Ft/óra)",
-      "small_group_courses_discounted_price": "Kedvezményes ár: 50 000 Ft szeptember 30-ig (2500 Ft/óra)"
+      "small_group_courses_base_price": "Alapár: 60 000 Ft (3000 Ft/45 perc)",
+      "small_group_courses_discounted_price": "Kedvezményes ár: 50 000 Ft szeptember 30-ig (2500 Ft/45 perc)"
     }
   },
   "myself": {
@@ -77,7 +77,7 @@
     "sixth": "Vasárnap 10:00-11:30 Online"
   },
   "group_courses_texts": {
-    "first": "Az összes kurzus az október 14-ével kezdődő héten indul és a tanítási szüneteket leszámítva minden héten, a megfelelő időpontban lesznek megtartva az órák. Jelentkezni október 13. éjfélig lehet.",
+    "first": "Az összes kurzus az <strong>október 14-ével kezdődő héten</strong> indul és a tanítási szüneteket leszámítva minden héten, a megfelelő időpontban lesznek megtartva az órák. Jelentkezni október 13. éjfélig lehet.",
     "second": "További információkat a jelentkezést követően, e-mailben fogok küldeni. Találkozzunk az órákon, és hozzuk ki együtt a legtöbbet a rettegett felvételiből!"
   },
   "sign_up": "Jelentkezek",

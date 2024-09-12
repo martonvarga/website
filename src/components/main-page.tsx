@@ -4,7 +4,7 @@ import Image from "next/image";
 import profilePicture from "../../public/images/vargamarton.webp";
 import logo from "../../public/images/logo.webp";
 import { useEffect, useState } from "react";
-import { useTranslation } from "next-i18next";
+import { Trans, useTranslation } from "next-i18next";
 import LanguageSwitcher from "@/components/language-switcher";
 import Input from "@/components/input";
 import SnackBar from "@/components/snackbar";
@@ -279,8 +279,17 @@ export default function MainPage() {
           className="mobile-profile-picture"
         />
         <div className="hero-description-container">
-          <p className="hero-description">{t("hero.myself_description_one")}</p>
-          <p className="hero-description">{t("hero.myself_description_two")}</p>
+          <p className="hero-description">
+            {
+              <Trans
+                i18nKey="hero.myself_description_one"
+                components={{ 1: <br /> }}
+              />
+            }
+          </p>
+          <p className="hero-description">
+            {<Trans i18nKey="hero.myself_description_two" />}
+          </p>
         </div>
       </section>
 
@@ -353,9 +362,8 @@ export default function MainPage() {
           </div>
         </div>
         <div className="courses-details" id="next-group-courses">
+          <h3 className="course-title">{t("course_options_list.title")}</h3>
           <ul>
-            <li>{t("course_options_list.title")}</li>
-            <br />
             <li>
               {t("course_options_list.days.tuesday")}:
               <ol>
@@ -383,7 +391,7 @@ export default function MainPage() {
               </ol>
             </li>
           </ul>
-          <p>{t("group_courses_texts.first")}</p>
+          <p>{<Trans i18nKey="group_courses_texts.first" />}</p>
           <p>{t("group_courses_texts.second")}</p>
         </div>
 
