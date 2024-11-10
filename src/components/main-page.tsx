@@ -185,7 +185,7 @@ export default function MainPage() {
                   {t("navigation.contact")}
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   onClick={() =>
                     handleMobileMenuItemOnClick("next-group-courses")
@@ -193,7 +193,7 @@ export default function MainPage() {
                 >
                   {t("navigation.courses")}
                 </a>
-              </li>
+              </li> */}
               <LanguageSwitcher />
             </ul>
           </nav>
@@ -214,9 +214,9 @@ export default function MainPage() {
               <li>
                 <a href="#contact">{t("navigation.contact")}</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#next-group-courses">{t("navigation.courses")}</a>
-              </li>
+              </li> */}
               <LanguageSwitcher />
             </ul>
           </nav>
