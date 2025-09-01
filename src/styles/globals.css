@@ -18,7 +18,10 @@ html {
 
 html {
   scroll-padding-top: 60px;
-  @media (min-device-width: 1024px) {
+}
+
+@media (min-width: 1024px) {
+  html {
     scroll-padding-top: 100px;
   }
 }
@@ -61,22 +64,20 @@ header {
   z-index: 10;
 }
 
-.header {
-  @media (min-device-width: 768px) {
-    /*tablet*/
+@media (min-width: 768px) {
+  .header {
     padding: 0 40px;
   }
-  @media (min-device-width: 1024px) {
-    /*desktop*/
-    padding: 20px 80px;
+  .footer {
+    padding: 20px 40px;
   }
 }
 
-.footer {
-  @media (min-device-width: 768px) {
-    padding: 20px 40px;
+@media (min-width: 1024px) {
+  .header {
+    padding: 20px 80px;
   }
-  @media (min-device-width: 1024px) {
+  .footer {
     padding: 20px 80px;
   }
 }
@@ -104,7 +105,10 @@ footer {
 
 .navigation {
   display: none;
-  @media (min-device-width: 1024px) {
+}
+
+@media (min-width: 1024px) {
+  .navigation {
     display: block;
   }
 }
@@ -150,14 +154,20 @@ footer {
   width: 300px;
   height: 450px;
   object-fit: cover;
-  @media (min-device-width: 768px) {
+}
+
+@media (min-width: 768px) {
+  .mobile-profile-picture {
     display: none;
   }
 }
 
 .profile-picture {
   display: none;
-  @media (min-device-width: 768px) {
+}
+
+@media (min-width: 768px) {
+  .profile-picture {
     display: block;
     width: 300px;
     height: 450px;
@@ -173,13 +183,13 @@ footer {
   padding: 10px 20px; /* Initial padding */
 }
 
-@media (min-device-width: 768px) {
+@media (min-width: 768px) {
   .hero {
     padding: 15px 40px; /* Overrides the previous padding for wider screens */
   }
 }
 
-@media (min-device-width: 1024px) {
+@media (min-width: 1024px) {
   .hero {
     padding: 20px 80px; /* Overrides the previous padding for even wider screens */
   }
@@ -208,7 +218,10 @@ footer {
   gap: 1rem;
   justify-content: center;
   flex-direction: column;
-  @media (min-device-width: 768px) {
+}
+
+@media (min-width: 768px) {
+  .email-list-form {
     flex-direction: row;
   }
 }
@@ -292,13 +305,13 @@ footer {
   padding: 10px 20px;
 }
 
-@media (min-device-width: 768px) {
+@media (min-width: 768px) {
   .courses-classes {
     padding: 15px 40px; /* Overrides the previous padding for wider screens */
   }
 }
 
-@media (min-device-width: 1024px) {
+@media (min-width: 1024px) {
   .courses-classes {
     padding: 20px 80px; /* Overrides the previous padding for even wider screens */
   }
@@ -309,13 +322,13 @@ footer {
   padding: 10px 20px;
 }
 
-@media (min-device-width: 768px) {
+@media (min-width: 768px) {
   .myself {
     padding: 15px 40px; /* Overrides the previous padding for wider screens */
   }
 }
 
-@media (min-device-width: 1024px) {
+@media (min-width: 1024px) {
   .myself {
     padding: 20px 80px; /* Overrides the previous padding for even wider screens */
   }
@@ -352,7 +365,10 @@ footer {
 .hamburger-menu-btn {
   cursor: pointer;
   display: block;
-  @media (min-device-width: 1024px) {
+}
+
+@media (min-width: 1024px) {
+  .hamburger-menu-btn {
     display: none;
   }
 }
@@ -553,8 +569,10 @@ ol li {
   flex-direction: row;
   align-items: center;
   gap: 10px;
+}
 
-  @media (min-device-width: 768px) {
+@media (min-width: 768px) {
+  .snackbar {
     font-size: 16px;
     top: 100px;
     right: 20px;
@@ -564,8 +582,10 @@ ol li {
 .snackbar-icon {
   width: 16px;
   height: 16px;
+}
 
-  @media (min-device-width: 768px) {
+@media (min-width: 768px) {
+  .snackbar-icon {
     width: 32px;
     height: 32px;
   }
