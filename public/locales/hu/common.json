@@ -27,7 +27,7 @@
       "small_group_courses_description": "A <strong>8. osztályos központi felvételire</strong> és a <strong>középszintű érettségire</strong> csoportos, 6-8 fős, <strong>vizsgafelkészítő kurzusokat</strong> is indítok. Célzottan a vizsgák típusfeladataira, intenzíven, egy <strong>10 hetes tanfolyam</strong> keretében készítem fel a tanulókat a megmérettetésre. Nem csupán feladatlapokat fogunk kitölteni, hanem ennél jóval hatékonyabban, témakörök szerint haladva, az általam kidolgozott tanagyagot és tematikát követve fogunk együtt mindent megtanulni, ami a sikeres vizsgához szükséges.",
       "small_group_courses_duration": "10 héten keresztül heti egy 90 perces alkalom",
       "small_group_courses_base_price": "Alapár: 75 000 Ft (3750 Ft/45 perc)",
-      "small_group_courses_discounted_price": "Kedvezményes ár: 50 000 Ft szeptember 30-ig (2500 Ft/45 perc)"
+      "small_group_courses_discounted_price": "Kedvezményes ár: 60 000 Ft október 19-ig (3000 Ft/45 perc)"
     }
   },
   "myself": {
@@ -69,15 +69,15 @@
     "course": "Válassz a kurzusok közül"
   },
   "course_options": {
-    "first": "Kedd 16:00-17:30 Személyes",
+    "first": "Kedd 17:00-18:30 Személyes",
     "second": "Kedd 18:00-19:30 Online",
     "third": "Csütörtök 16:00-17:30 Személyes",
-    "fourth": "Csütörtök 18:00-19:30 Online",
-    "fifth": "Szombat 10:00-11:30 Személyes",
-    "sixth": "Vasárnap 10:00-11:30 Online"
+    "fourth": "Csütörtök 17:00-18:30 Online",
+    "fifth": "Szombat 09:30-11:00 Online",
+    "sixth": "Szombat 11:30-13:00 Személyes"
   },
   "group_courses_texts": {
-    "first": "Az összes kurzus az <strong>október 14-ével kezdődő héten</strong> indul és a tanítási szüneteket leszámítva minden héten, a megfelelő időpontban lesznek megtartva az órák. Jelentkezni október 13. éjfélig lehet.",
+    "first": "Az összes kurzus az <strong>november 13-ával kezdődő héten</strong> indul és a tanítási szüneteket leszámítva minden héten, a megfelelő időpontban lesznek megtartva az órák. Jelentkezni november 3. éjfélig lehet.",
     "second": "További információkat a jelentkezést követően, e-mailben fogok küldeni. Találkozzunk az órákon, és hozzuk ki együtt a legtöbbet a rettegett felvételiből!"
   },
   "sign_up": "Jelentkezek",
