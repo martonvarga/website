@@ -350,45 +350,38 @@ export default function MainPage() {
                     "courses_classes.small_group_courses.small_group_courses_base_price"
                   )}
                 </span>
-                {/* <span>
+                <span>
                   {" "}
                   |{" "}
                   {t(
                     "courses_classes.small_group_courses.small_group_courses_discounted_price"
                   )}
-                </span> */}
+                </span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* <div className="courses-details" id="next-group-courses">
+        <div className="courses-details" id="next-group-courses">
           <h3 className="course-title">{t("course_options_list.title")}</h3>
           <ul>
             <li>
               {t("course_options_list.days.tuesday")}:
               <ol>
-                <li>16:00-17:30 {t("course_options_list.personal")}</li>
-                <li>18:00-19:30 {t("course_options_list.online")}</li>
+                <li>17:00-18:30 {t("course_options_list.personal")}</li>
               </ol>
             </li>
             <li>
               {t("course_options_list.days.thursday")}:
               <ol>
-                <li>16:00-17:30 {t("course_options_list.personal")}</li>
-                <li>18:00-19:30 {t("course_options_list.online")}</li>
+                <li>17:00-18:30 {t("course_options_list.online")}</li>
               </ol>
             </li>
             <li>
               {t("course_options_list.days.saturday")}:
               <ol>
-                <li>10:00-11:30 {t("course_options_list.personal")}</li>
-              </ol>
-            </li>
-            <li>
-              {t("course_options_list.days.sunday")}:
-              <ol>
-                <li>10:00-11:30 {t("course_options_list.online")}</li>
+                <li>09:30-11:00 {t("course_options_list.online")}</li>
+                <li>11:30-13:00 {t("course_options_list.personal")}</li>
               </ol>
             </li>
           </ul>
@@ -432,11 +425,9 @@ export default function MainPage() {
               >
                 <option value="">{""}</option>
                 <option value="SZ1">{t("course_options.first")}</option>
-                <option value="O1">{t("course_options.second")}</option>
-                <option value="SZ2">{t("course_options.third")}</option>
-                <option value="O2">{t("course_options.fourth")}</option>
-                <option value="SZ3">{t("course_options.fifth")}</option>
-                <option value="O3">{t("course_options.sixth")}</option>
+                <option value="O1">{t("course_options.fourth")}</option>
+                <option value="O2">{t("course_options.fifth")}</option>
+                <option value="SZ2">{t("course_options.sixth")}</option>
               </select>
             </label>
 
@@ -448,7 +439,7 @@ export default function MainPage() {
               {t("sign_up")}
             </button>
           </form>
-        </div> */}
+        </div>
       </section>
 
       <section className="myself" id="myself">

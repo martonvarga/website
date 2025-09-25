@@ -28,7 +28,7 @@
       "small_group_courses_description": "I also offer group preparation courses for the <strong>8th-grade entrance exam</strong> and the <strong>intermediate-level graduation exam</strong>, consisting of 6-8 students. These courses focus intensively on exam-specific tasks, preparing students for the challenges ahead through a <strong>10-week program</strong>. Instead of just filling out tests from previous years, we will work much more effectively, progressing through topics and following the curriculum and schedule I have developed, ensuring that students learn everything necessary for a successful exam.",
       "small_group_courses_duration": "The course consists of one 90-minute session per week for 10 weeks",
       "small_group_courses_base_price": "Regular price: 75 000 HUF (3750 HUF/45 minutes)",
-      "small_group_courses_discounted_price": "Discounted price: 50,000 HUF if registered by September 30 (2,500 HUF per 45 minutes)"
+      "small_group_courses_discounted_price": "Discounted price: 60,000 HUF if registered by october 19 (3000 HUF per 45 minutes)"
     }
   },
   "myself": {
@@ -71,15 +71,15 @@
     "course": "Choose from the available courses"
   },
   "course_options": {
-    "first": "Tuesday 16:00-17:30 Személyes",
+    "first": "Tuesday 17:00-18:30 In-person",
     "second": "Tuesday 18:00-19:30 Online",
-    "third": "Thursday 16:00-17:30 Személyes",
-    "fourth": "Thursday 18:00-19:30 Online",
-    "fifth": "Saturday 10:00-11:30 Személyes",
-    "sixth": "Sunday 10:00-11:30 Online"
+    "third": "Thursday 16:00-17:30 In-person",
+    "fourth": "Thursday 17:00-18:30 Online",
+    "fifth": "Saturday 09:30-11:00 Online",
+    "sixth": "Sunday 11:30-13:00 In-person"
   },
   "group_courses_texts": {
-    "first": "All courses will start during the <strong>week starting with October 14</strong> and the lessons will be held every week at the appointed times, except school holidays. The deadline to apply is midnight on October 13.",
+    "first": "All courses will start during the <strong>week starting with November 3</strong> and the lessons will be held every week at the appointed times, except school holidays. The deadline to apply is midnight on november 3.",
     "second": "Further information will be sent via email after registration. I look forward to seeing you in class, and together, let’s make the most of the dreaded entrance exam!"
   },
   "sign_up": "Sign Up",
