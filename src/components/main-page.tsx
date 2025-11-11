@@ -350,13 +350,13 @@ export default function MainPage() {
                     "courses_classes.small_group_courses.small_group_courses_base_price"
                   )}
                 </span>
-                <span>
+                {/* <span>
                   {" "}
                   |{" "}
                   {t(
                     "courses_classes.small_group_courses.small_group_courses_discounted_price"
                   )}
-                </span>
+                </span> */}
               </div>
             </div>
           </div>
