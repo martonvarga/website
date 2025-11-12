@@ -350,19 +350,19 @@ export default function MainPage() {
                     "courses_classes.small_group_courses.small_group_courses_base_price"
                   )}
                 </span>
-                <span>
+                {/* <span>
                   {" "}
                   |{" "}
                   {t(
                     "courses_classes.small_group_courses.small_group_courses_discounted_price"
                   )}
-                </span>
+                </span> */}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="courses-details" id="next-group-courses">
+        {/* <div className="courses-details" id="next-group-courses">
           <h3 className="course-title">{t("course_options_list.title")}</h3>
           <ul>
             <li>
@@ -387,9 +387,9 @@ export default function MainPage() {
           </ul>
           <p>{<Trans i18nKey="group_courses_texts.first" />}</p>
           <p>{t("group_courses_texts.second")}</p>
-        </div>
+        </div> */}
 
-        <div className="course-sign-up-container">
+        {/* <div className="course-sign-up-container">
           <form action="submit" onSubmit={onSubmitSignUpForm}>
             <Input
               name="firstName"
@@ -438,8 +438,8 @@ export default function MainPage() {
             >
               {t("sign_up")}
             </button>
-          </form>
-        </div>
+          </form> */}
+        {/* </div> */}
       </section>
 
       <section className="myself" id="myself">
