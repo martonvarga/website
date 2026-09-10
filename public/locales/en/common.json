@@ -85,5 +85,9 @@
   "sign_up": "Sign Up",
   "snackbar": {
     "success": "You have successfully subscribed!"
+  },
+  "central-entrance-exam" : {
+    "title": "Central entrance exam",
+    "description1": "Although the entrance exam includes a question or twist almost every year that can come as a surprise, the tests themselves are very similar, and the tasks are designed according to a clear and consistent pattern. It is easy to see which types of questions the different parts of the exam usually come from. The best way to take advantage of this is to go through these question types thoroughly and practise them extensively. This is what I would like to help with through the following collection of exercises and its accompanying answer key. I have collected the entrance exam questions from previous years and organised them into different categories and topics, making it possible to practise each question type in a targeted and focused way."
   }
 }
