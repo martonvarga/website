@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Hubot Sans";
-  src: url("/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
+  src:
+    url("/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
     url("/fonts/Hubot-Sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
@@ -283,7 +284,8 @@ footer {
   backdrop-filter: blur(40px);
   padding: 1.5rem;
   max-width: 500px;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 .description2 {
@@ -291,8 +293,63 @@ footer {
   border-radius: 1.5rem;
   backdrop-filter: blur(40px);
   padding: 1.5rem;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.central-entrance-exam {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* background: #3e588b;
+  color: white; */
+  padding: 10px 20px;
+}
+
+@media (min-width: 768px) {
+  .central-entrance-exam {
+    padding: 15px 40px; /* Overrides the previous padding for wider screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .central-entrance-exam {
+    padding: 20px 80px; /* Overrides the previous padding for even wider screens */
+  }
+}
+
+.pdf-download-btns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pdf-download-btns-container :first-of-type {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .pdf-download-btns-container {
+    justify-content: flex-start;
+  }
+}
+
+.pdf-file-download-btn {
+  height: 20px;
+  border: 1.5px solid rgb(212 212 212);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: rgb(44, 62, 80);
+  color: white;
+  text-align: center;
+}
+
+.pdf-file-download-btn:hover {
+  background-color: white;
+  color: rgb(44, 62, 80);
 }
 
 .courses-classes {

@@ -3,11 +3,12 @@
 import Image from "next/image";
 import profilePicture from "../../public/images/vargamarton.webp";
 import logo from "../../public/images/logo.webp";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Trans, useTranslation } from "next-i18next";
 import LanguageSwitcher from "@/components/language-switcher";
 import Input from "@/components/input";
 import SnackBar from "@/components/snackbar";
+import Popup from "reactjs-popup";
 
 enum CourseType {
   KEDD_PERSONAL_16_00_17_30 = "Kedd 16:00-17:30 Személyes",
@@ -46,7 +47,7 @@ export default function MainPage() {
 
   useEffect(() => {
     const allFieldsFilled = Object.values(signUpCourseFormValues).every(
-      (value) => value.trim() !== ""
+      (value) => value.trim() !== "",
     );
 
     setIsButtonDisabled(!allFieldsFilled);
@@ -59,7 +60,7 @@ export default function MainPage() {
   const { t } = useTranslation("common");
 
   function onSignUpValueChange(
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) {
     setSignUpCourseFormValues({
       ...signUpCourseFormValues,
@@ -293,6 +294,112 @@ export default function MainPage() {
         </div>
       </section>
 
+      <section id="central-entrance-exam" className="central-entrance-exam">
+        <h2 className="section-title classes-title">
+          {t("central-entrance-exam.title")}
+        </h2>
+        <p>{t("central-entrance-exam.description1")}</p>
+        <div className="pdf-download-btns-container">
+          <button className="pdf-file-download-btn">
+            <a href="/pdfs/feladatgyujtemeny.pdf" download>
+              Feladatgyűjtemény
+            </a>
+          </button>
+
+          <button className="pdf-file-download-btn">
+            <a href="/pdfs/megoldokulcs.pdf" download>
+              Megoldókulcs
+            </a>
+          </button>
+        </div>
+        <p>{t("central-entrance-exam.description2")}</p>
+        <p>{t("central-entrance-exam.workbook_price")}</p>
+        <Popup
+          trigger={<button className="email-submit-btn">Megrendelem</button>}
+          modal
+          nested
+          lockScroll
+          closeOnDocumentClick={false}
+        >
+          {
+            ((close: any) => (
+              <div>
+                <div className="course-sign-up-container">
+                  <form action="submit" onSubmit={() => {}}>
+                    <Input
+                      name="firstName"
+                      type="text"
+                      label={t("central-entrance-exam_signup-form.first_name")}
+                      value={signUpCourseFormValues.firstName}
+                      onChange={onSignUpValueChange}
+                      className="sign-up-form-input"
+                    />
+                    <Input
+                      name="lastName"
+                      type="text"
+                      label={t("central-entrance-exam_signup-form.last_name")}
+                      value={signUpCourseFormValues.lastName}
+                      onChange={onSignUpValueChange}
+                      className="sign-up-form-input"
+                    />
+                    <Input
+                      name="email"
+                      type="email"
+                      label={t("central-entrance-exam_signup-form.email")}
+                      value={signUpCourseFormValues.email}
+                      onChange={onSignUpValueChange}
+                      className="sign-up-form-input"
+                    />
+                    <Input
+                      name="zip"
+                      type="zip"
+                      label={t("central-entrance-exam_signup-form.zip")}
+                      value={signUpCourseFormValues.email}
+                      onChange={onSignUpValueChange}
+                      className="sign-up-form-input"
+                    />
+                    <Input
+                      name="town"
+                      type="town"
+                      label={t("central-entrance-exam_signup-form.city")}
+                      value={signUpCourseFormValues.email}
+                      onChange={onSignUpValueChange}
+                      className="sign-up-form-input"
+                    />
+                    <Input
+                      name="address"
+                      type="address"
+                      label={t("central-entrance-exam_signup-form.address")}
+                      value={signUpCourseFormValues.email}
+                      onChange={onSignUpValueChange}
+                      className="sign-up-form-input"
+                    />
+
+                    <button
+                      type="submit"
+                      disabled={isButtonDisabled}
+                      className="sign-up-form-submit-button"
+                    >
+                      {t("sign_up")}
+                    </button>
+                  </form>
+                  <button
+                    onClick={close}
+                    style={{
+                      marginTop: "15px",
+                      padding: "8px 16px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )) as any
+          }
+        </Popup>
+      </section>
+
       <section className="courses-classes" id="courses-classes">
         <h2 className="section-title classes-title">
           {t("courses_classes.main_title")}
@@ -306,19 +413,19 @@ export default function MainPage() {
             <div>
               <p>
                 {t(
-                  "courses_classes.individual_classes.individual_classes_description_one"
+                  "courses_classes.individual_classes.individual_classes_description_one",
                 )}
                 <br />
                 <br />
                 {t(
-                  "courses_classes.individual_classes.individual_classes_description_two"
+                  "courses_classes.individual_classes.individual_classes_description_two",
                 )}
               </p>
             </div>
             <div className="course-info">
               <span>
                 {t(
-                  "courses_classes.individual_classes.individual_course_duration"
+                  "courses_classes.individual_classes.individual_course_duration",
                 )}
               </span>
             </div>
@@ -328,7 +435,7 @@ export default function MainPage() {
           <div className="course-details">
             <h3 className="course-title">
               {t(
-                "courses_classes.small_group_courses.small_group_courses_title"
+                "courses_classes.small_group_courses.small_group_courses_title",
               )}
             </h3>
             <div className="course-details-container">
@@ -340,14 +447,14 @@ export default function MainPage() {
               <div className="course-info">
                 <span>
                   {t(
-                    "courses_classes.small_group_courses.small_group_courses_duration"
+                    "courses_classes.small_group_courses.small_group_courses_duration",
                   )}
                 </span>
                 <span>
                   {" "}
                   |{" "}
                   {t(
-                    "courses_classes.small_group_courses.small_group_courses_base_price"
+                    "courses_classes.small_group_courses.small_group_courses_base_price",
                   )}
                 </span>
                 {/* <span>

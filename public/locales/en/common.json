@@ -86,8 +86,18 @@
   "snackbar": {
     "success": "You have successfully subscribed!"
   },
-  "central-entrance-exam" : {
+  "central-entrance-exam": {
     "title": "Central entrance exam",
-    "description1": "Although the entrance exam includes a question or twist almost every year that can come as a surprise, the tests themselves are very similar, and the tasks are designed according to a clear and consistent pattern. It is easy to see which types of questions the different parts of the exam usually come from. The best way to take advantage of this is to go through these question types thoroughly and practise them extensively. This is what I would like to help with through the following collection of exercises and its accompanying answer key. I have collected the entrance exam questions from previous years and organised them into different categories and topics, making it possible to practise each question type in a targeted and focused way."
+    "description1": "Although the entrance exam includes a question or twist almost every year that can come as a surprise, the tests themselves are very similar, and the tasks are designed according to a clear and consistent pattern. It is easy to see which types of questions the different parts of the exam usually come from. The best way to take advantage of this is to go through these question types thoroughly and practise them extensively. This is what I would like to help with through the following collection of exercises and its accompanying answer key. I have collected the entrance exam questions from previous years and organised them into different categories and topics, making it possible to practise each question type in a targeted and focused way.",
+    "description2": "If you feel that you would benefit from more guidance, help, or explanation, I would like to recommend my exam preparation workbook, which takes you through the entire curriculum step by step. Each chapter focuses on a specific topic and the types of questions associated with it. After a short but comprehensive theoretical introduction, filled with diagrams and explanations, you will find worked-out example problems that will help you understand the material and apply the theory in practice. Each topic concludes with a selection of recommended practice exercises, which I strongly recommend completing from the exercise collection. Of course, there is no harm in doing the others as well!",
+    "workbook_price": "The workbook costs 4000 HUF."
+  },
+  "central-entrance-exam_signup-form": {
+    "first_name": "First name",
+    "last_name": "Last name",
+    "email": "Email",
+    "zip": "Zip code",
+    "city": "City",
+    "address": "Address"
   }
 }

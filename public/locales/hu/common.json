@@ -84,8 +84,18 @@
   "snackbar": {
     "success": "Sikeresen jelentkeztél a kurzusra!"
   },
-  "central-entrance-exam" : {
+  "central-entrance-exam": {
     "title": "Központi felvételi",
-    "description1": "A felvételi ugyan szinte minden évben tartogat valami olyan kérdést, csavart, amely meglepetést jelenthet, ennek ellenére a tesztek nagyon hasonlóak, a feladatokat egy jól követhető minta alapján állítják össze. Látható, hogy a feladatsor egyes elemei általában mely feladattípusok közül kerülnek ki. Ezt úgy lehet a legjobban kihasználni, ha ezeket a típusokat töviről hegyire végignézzük, begyakoroljuk. Ebben szeretnék segíteni az alábbi feladatgyűjteménnyel és a hozzá tartozó megoldókulccsal. A korábbi évek felvételi feladatait gyűjtöttem össze és soroltam be különböző kategóriákba, témakörökbe, ezzel lehetővé téve a célzott gyakorlást az egyes feladattípusokra."
+    "description1": "A felvételi ugyan szinte minden évben tartogat valami olyan kérdést, csavart, amely meglepetést jelenthet, ennek ellenére a tesztek nagyon hasonlóak, a feladatokat egy jól követhető minta alapján állítják össze. Látható, hogy a feladatsor egyes elemei általában mely feladattípusok közül kerülnek ki. Ezt úgy lehet a legjobban kihasználni, ha ezeket a típusokat töviről hegyire végignézzük, begyakoroljuk. Ebben szeretnék segíteni az alábbi feladatgyűjteménnyel és a hozzá tartozó megoldókulccsal. A korábbi évek felvételi feladatait gyűjtöttem össze és soroltam be különböző kategóriákba, témakörökbe, ezzel lehetővé téve a célzott gyakorlást az egyes feladattípusokra.",
+    "description2": "Ha úgy érzed, hogy több iránymutatásra, segítségre, magyarázatra lenne szükséged, szeretném figyelmedbe ajánlani a vizsgára felkészítő munkafüzetemet, amely végigvezet téged a teljes tananyagon. Minden fejezet egy témakörrel és annak feladattípusaival foglalkozik. Egy rövid, de átfogó; rajzokkal, magyarázatokkal teli elméleti bevezetőt követően kidolgozott példafeladatokat találsz, melyek segíteni fognak a megértésben, valamint az elmélet gyakorlatba történő átültetésében. Minden témakör gyakorló feladatok ajánlásával zárul, ezeket mindenképp érdemes megoldani a feladatgyűjteményből. Persze a többi sem árt!",
+    "workbook_price": "A munkafüzet ára 4000 Ft."
+  },
+  "central-entrance-exam_signup-form": {
+    "first_name": "Vezetéknév",
+    "last_name": "Keresztnév",
+    "email": "Email",
+    "zip": "Irányítószám",
+    "city": "Település",
+    "address": "Cím"
   }
 }
