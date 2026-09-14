@@ -88,7 +88,10 @@
     "title": "Központi felvételi",
     "description1": "A felvételi ugyan szinte minden évben tartogat valami olyan kérdést, csavart, amely meglepetést jelenthet, ennek ellenére a tesztek nagyon hasonlóak, a feladatokat egy jól követhető minta alapján állítják össze. Látható, hogy a feladatsor egyes elemei általában mely feladattípusok közül kerülnek ki. Ezt úgy lehet a legjobban kihasználni, ha ezeket a típusokat töviről hegyire végignézzük, begyakoroljuk. Ebben szeretnék segíteni az alábbi feladatgyűjteménnyel és a hozzá tartozó megoldókulccsal. A korábbi évek felvételi feladatait gyűjtöttem össze és soroltam be különböző kategóriákba, témakörökbe, ezzel lehetővé téve a célzott gyakorlást az egyes feladattípusokra.",
     "description2": "Ha úgy érzed, hogy több iránymutatásra, segítségre, magyarázatra lenne szükséged, szeretném figyelmedbe ajánlani a vizsgára felkészítő munkafüzetemet, amely végigvezet téged a teljes tananyagon. Minden fejezet egy témakörrel és annak feladattípusaival foglalkozik. Egy rövid, de átfogó; rajzokkal, magyarázatokkal teli elméleti bevezetőt követően kidolgozott példafeladatokat találsz, melyek segíteni fognak a megértésben, valamint az elmélet gyakorlatba történő átültetésében. Minden témakör gyakorló feladatok ajánlásával zárul, ezeket mindenképp érdemes megoldani a feladatgyűjteményből. Persze a többi sem árt!",
-    "workbook_price": "A munkafüzet ára 4000 Ft."
+    "workbook_price": "A munkafüzet ára 4000 Ft.",
+    "exercise_collection_download": "Feladatgyűjtemény",
+    "answer_key_download": "Megoldókulcs",
+    "description3": "A felkészülésedet a munkafüzet tanulmányozása mellett azzal tudod még eredményesebbé tenni, ha jelentkezel az egyik felkészítő kurzusomra vagy akár egyéni órára. Ugyanis ezesetben már nem egyedül kell szembenézz a rád váró kihívással, hanem együtt, közösen fogjuk végigcsinálni a felkészülést. Garantálom, hogy minden tudásomat, tapasztalatomat be fogom vetni annak érdekében, hogy a lehető legtöbb pontot megszerezd a vizsgán."
   },
   "central-entrance-exam_signup-form": {
     "first_name": "Vezetéknév",
@@ -96,6 +99,10 @@
     "email": "Email",
     "zip": "Irányítószám",
     "city": "Település",
-    "address": "Cím"
-  }
+    "address": "Cím",
+    "order_button": "Megrendelem",
+    "success": "A megrendelést követő 3 munkanapon belül, e-mailben jelentkezem a vásárlás további lépéseivel. Ha nem érkezik e-mail, kérlek, ellenőrizd a SPAM mappát, ha ott sincs, akkor pedig keress bizalommal."
+  },
+  "close": "Bezárás",
+  "send": "Küldés"
 }
