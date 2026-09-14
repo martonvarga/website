@@ -8,23 +8,8 @@ import { Trans, useTranslation } from "next-i18next";
 import LanguageSwitcher from "@/components/language-switcher";
 import Input from "@/components/input";
 import SnackBar from "@/components/snackbar";
-import Popup from "reactjs-popup";
-
-enum CourseType {
-  KEDD_PERSONAL_16_00_17_30 = "Kedd 16:00-17:30 Személyes",
-  KEDD_ONLINE_18_00_19_30 = "Kedd 18:00-19:30 Online",
-  CSUTORTOK_PERSONAL_16_00_17_30 = "Csütörtök 16:00-17:30 Személyes",
-  CSUTORTOK_ONLINE_18_00_19_30 = "Csütörtök 18:00-19:30 Online",
-  SZOMBAT_PERSONAL_10_00_11_30 = "Szombat 10:00-11:30 Személyes",
-  VASARNAP_ONLINE_10_00_11_30 = "Vasárnap 10:00-11:30 Online",
-}
-
-type CourseSignUpFormType = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  course: CourseType | "";
-};
+import CentralEntranceExamSignUpPopup from "@/components/central-entrance-exam-sign-up-popup";
+import { CourseSignUpFormType } from "@/types/course";
 
 const defaultSignUpToCourseFormValues: CourseSignUpFormType = {
   firstName: "",
@@ -294,7 +279,7 @@ export default function MainPage() {
         </div>
       </section>
 
-      <section id="central-entrance-exam" className="central-entrance-exam">
+      <section className="courses-classes" id="courses-classes">
         <h2 className="section-title classes-title">
           {t("central-entrance-exam.title")}
         </h2>
@@ -302,105 +287,20 @@ export default function MainPage() {
         <div className="pdf-download-btns-container">
           <button className="pdf-file-download-btn">
             <a href="/pdfs/feladatgyujtemeny.pdf" download>
-              Feladatgyűjtemény
+              {t("central-entrance-exam.exercise_collection_download")}
             </a>
           </button>
 
           <button className="pdf-file-download-btn">
             <a href="/pdfs/megoldokulcs.pdf" download>
-              Megoldókulcs
+              {t("central-entrance-exam.answer_key_download")}
             </a>
           </button>
         </div>
         <p>{t("central-entrance-exam.description2")}</p>
         <p>{t("central-entrance-exam.workbook_price")}</p>
-        <Popup
-          trigger={<button className="email-submit-btn">Megrendelem</button>}
-          modal
-          nested
-          lockScroll
-          closeOnDocumentClick={false}
-        >
-          {
-            ((close: any) => (
-              <div>
-                <div className="course-sign-up-container">
-                  <form action="submit" onSubmit={() => {}}>
-                    <Input
-                      name="firstName"
-                      type="text"
-                      label={t("central-entrance-exam_signup-form.first_name")}
-                      value={signUpCourseFormValues.firstName}
-                      onChange={onSignUpValueChange}
-                      className="sign-up-form-input"
-                    />
-                    <Input
-                      name="lastName"
-                      type="text"
-                      label={t("central-entrance-exam_signup-form.last_name")}
-                      value={signUpCourseFormValues.lastName}
-                      onChange={onSignUpValueChange}
-                      className="sign-up-form-input"
-                    />
-                    <Input
-                      name="email"
-                      type="email"
-                      label={t("central-entrance-exam_signup-form.email")}
-                      value={signUpCourseFormValues.email}
-                      onChange={onSignUpValueChange}
-                      className="sign-up-form-input"
-                    />
-                    <Input
-                      name="zip"
-                      type="zip"
-                      label={t("central-entrance-exam_signup-form.zip")}
-                      value={signUpCourseFormValues.email}
-                      onChange={onSignUpValueChange}
-                      className="sign-up-form-input"
-                    />
-                    <Input
-                      name="town"
-                      type="town"
-                      label={t("central-entrance-exam_signup-form.city")}
-                      value={signUpCourseFormValues.email}
-                      onChange={onSignUpValueChange}
-                      className="sign-up-form-input"
-                    />
-                    <Input
-                      name="address"
-                      type="address"
-                      label={t("central-entrance-exam_signup-form.address")}
-                      value={signUpCourseFormValues.email}
-                      onChange={onSignUpValueChange}
-                      className="sign-up-form-input"
-                    />
-
-                    <button
-                      type="submit"
-                      disabled={isButtonDisabled}
-                      className="sign-up-form-submit-button"
-                    >
-                      {t("sign_up")}
-                    </button>
-                  </form>
-                  <button
-                    onClick={close}
-                    style={{
-                      marginTop: "15px",
-                      padding: "8px 16px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            )) as any
-          }
-        </Popup>
-      </section>
-
-      <section className="courses-classes" id="courses-classes">
+        <CentralEntranceExamSignUpPopup />
+        <p>{t("central-entrance-exam.description3")}</p>
         <h2 className="section-title classes-title">
           {t("courses_classes.main_title")}
         </h2>
