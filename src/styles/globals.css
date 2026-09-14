@@ -308,6 +308,41 @@ footer {
   padding: 10px 20px;
 }
 
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.central-entrance-exam-sign-up-container {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.central-entrance-exam-sign-up-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.central-entrance-exam-sign-up-close-button {
+  height: 20px;
+  border: 1.5px solid rgb(212 212 212);
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: rgb(212, 212, 212);
+  color: rgb(44, 62, 80);
+  text-align: center;
+}
+
+.central-entrance-exam-sign-up-close-button:hover {
+  background-color: white;
+  color: rgb(44, 62, 80);
+}
+
 @media (min-width: 768px) {
   .central-entrance-exam {
     padding: 15px 40px; /* Overrides the previous padding for wider screens */
@@ -518,6 +553,9 @@ ol li {
 
 .sign-up-form-input {
   width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 1.5rem;
