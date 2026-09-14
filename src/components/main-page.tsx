@@ -27,16 +27,11 @@ export default function MainPage() {
   const [signUpCourseFormValues, setSignUpCourseFormValues] =
     useState<CourseSignUpFormType>(defaultSignUpToCourseFormValues);
 
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [showSnackBar, setShowSnackBar] = useState(false);
 
-  useEffect(() => {
-    const allFieldsFilled = Object.values(signUpCourseFormValues).every(
-      (value) => value.trim() !== "",
-    );
-
-    setIsButtonDisabled(!allFieldsFilled);
-  }, [signUpCourseFormValues]);
+  const isButtonDisabled = !Object.values(signUpCourseFormValues).every(
+    (value) => value.trim() !== "",
+  );
 
   useEffect(() => {
     console.log({ showSnackBar });
@@ -88,7 +83,7 @@ export default function MainPage() {
   }
 
   function handleMobileMenuItemOnClick(route: string) {
-    window.location.href = `#${route}`;
+    window.location.hash = route;
     setIsMobilemenuOpen(false);
   }
 

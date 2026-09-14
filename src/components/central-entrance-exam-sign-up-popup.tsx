@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import Popup from "reactjs-popup";
 import Input from "@/components/input";
@@ -15,18 +15,13 @@ function CentralEntranceExamSignUpPopup() {
   const [formValues, setFormValues] = useState<WorkbookOrderFormType>(
     defaultWorkbookOrderFormValues,
   );
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  useEffect(() => {
-    const allFieldsFilled = Object.values(formValues).every(
-      (value) => value.trim() !== "",
-    );
-
-    setIsButtonDisabled(!allFieldsFilled);
-  }, [formValues]);
+  const isButtonDisabled = !Object.values(formValues).every(
+    (value) => value.trim() !== "",
+  );
 
   function onClose(close: () => void) {
     setFormValues(defaultWorkbookOrderFormValues);
