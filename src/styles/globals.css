@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Hubot Sans";
-  src: url("/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
+  src:
+    url("/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
     url("/fonts/Hubot-Sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
@@ -111,29 +112,6 @@ footer {
   .navigation {
     display: block;
   }
-}
-
-.mobile-menu {
-  flex-direction: column;
-  width: 100%;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  color: white;
-  background-color: rgba(44, 62, 80, 1);
-}
-
-.mobile-nav-links li {
-  text-align: center;
-  padding: 15px 0;
-  border-top: 1px solid rgb(170, 170, 170);
-}
-
-.mobile-menu {
-  display: block;
-  opacity: 0;
-  transform: translateY(-100%);
-  animation: slideDown 0.8s ease-out forwards;
 }
 
 .logo {
@@ -277,22 +255,77 @@ footer {
   line-height: 1.5;
 }
 
-.description {
-  border: 1.5px solid rgb(212 212 212);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(40px);
-  padding: 1.5rem;
-  max-width: 500px;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  padding: 20px 0;
+  box-sizing: border-box;
 }
-.description2 {
+
+.central-entrance-exam-sign-up-container {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.central-entrance-exam-sign-up-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.central-entrance-exam-sign-up-close-button {
+  height: 20px;
   border: 1.5px solid rgb(212 212 212);
   border-radius: 1.5rem;
-  backdrop-filter: blur(40px);
-  padding: 1.5rem;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: rgb(212, 212, 212);
+  color: rgb(44, 62, 80);
+  text-align: center;
+}
+
+.central-entrance-exam-sign-up-close-button:hover {
+  background-color: white;
+  color: rgb(44, 62, 80);
+}
+
+.pdf-download-btns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pdf-download-btns-container :first-of-type {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .pdf-download-btns-container {
+    justify-content: flex-start;
+  }
+}
+
+.pdf-file-download-btn {
+  height: 20px;
+  border: 1.5px solid rgb(212 212 212);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: rgb(44, 62, 80);
+  color: white;
+  text-align: center;
+}
+
+.pdf-file-download-btn:hover {
+  background-color: white;
+  color: rgb(44, 62, 80);
 }
 
 .courses-classes {
@@ -374,6 +407,7 @@ footer {
 }
 
 .mobile-menu {
+  display: block;
   flex-direction: column;
   width: 100%;
   position: absolute;
@@ -381,6 +415,9 @@ footer {
   left: 0;
   color: white;
   background-color: rgba(44, 62, 80, 1);
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: slideDown 0.8s ease-out forwards;
 }
 
 .mobile-nav-links li {
@@ -398,13 +435,6 @@ footer {
     transform: translateY(0);
     opacity: 1;
   }
-}
-
-.mobile-menu {
-  display: block;
-  opacity: 0;
-  transform: translateY(-100%);
-  animation: slideDown 0.8s ease-out forwards;
 }
 
 .contact-item {
@@ -461,6 +491,9 @@ ol li {
 
 .sign-up-form-input {
   width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 1.5rem;
@@ -515,16 +548,6 @@ ol li {
   font-size: 16px;
   color: #333;
   transition: all 0.3s ease;
-}
-
-.sign-up-to-course-button {
-  width: 100%;
-  padding: 10px;
-  color: #fff;
-  background-color: #ff784a;
-  border-radius: 1.5rem;
-  font-size: 16px;
-  text-align: center;
 }
 
 .courses-details {

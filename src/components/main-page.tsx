@@ -3,27 +3,13 @@
 import Image from "next/image";
 import profilePicture from "../../public/images/vargamarton.webp";
 import logo from "../../public/images/logo.webp";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Trans, useTranslation } from "next-i18next";
 import LanguageSwitcher from "@/components/language-switcher";
 import Input from "@/components/input";
 import SnackBar from "@/components/snackbar";
-
-enum CourseType {
-  KEDD_PERSONAL_16_00_17_30 = "Kedd 16:00-17:30 Személyes",
-  KEDD_ONLINE_18_00_19_30 = "Kedd 18:00-19:30 Online",
-  CSUTORTOK_PERSONAL_16_00_17_30 = "Csütörtök 16:00-17:30 Személyes",
-  CSUTORTOK_ONLINE_18_00_19_30 = "Csütörtök 18:00-19:30 Online",
-  SZOMBAT_PERSONAL_10_00_11_30 = "Szombat 10:00-11:30 Személyes",
-  VASARNAP_ONLINE_10_00_11_30 = "Vasárnap 10:00-11:30 Online",
-}
-
-type CourseSignUpFormType = {
-  firstName: string;
-  lastName: string;
-  email: string;
-  course: CourseType | "";
-};
+import CentralEntranceExamSignUpPopup from "@/components/central-entrance-exam-sign-up-popup";
+import { CourseSignUpFormType } from "@/types/course";
 
 const defaultSignUpToCourseFormValues: CourseSignUpFormType = {
   firstName: "",
@@ -41,16 +27,11 @@ export default function MainPage() {
   const [signUpCourseFormValues, setSignUpCourseFormValues] =
     useState<CourseSignUpFormType>(defaultSignUpToCourseFormValues);
 
-  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [showSnackBar, setShowSnackBar] = useState(false);
 
-  useEffect(() => {
-    const allFieldsFilled = Object.values(signUpCourseFormValues).every(
-      (value) => value.trim() !== ""
-    );
-
-    setIsButtonDisabled(!allFieldsFilled);
-  }, [signUpCourseFormValues]);
+  const isButtonDisabled = !Object.values(signUpCourseFormValues).every(
+    (value) => value.trim() !== "",
+  );
 
   useEffect(() => {
     console.log({ showSnackBar });
@@ -59,7 +40,7 @@ export default function MainPage() {
   const { t } = useTranslation("common");
 
   function onSignUpValueChange(
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) {
     setSignUpCourseFormValues({
       ...signUpCourseFormValues,
@@ -102,7 +83,7 @@ export default function MainPage() {
   }
 
   function handleMobileMenuItemOnClick(route: string) {
-    window.location.href = `#${route}`;
+    window.location.hash = route;
     setIsMobilemenuOpen(false);
   }
 
@@ -295,6 +276,27 @@ export default function MainPage() {
 
       <section className="courses-classes" id="courses-classes">
         <h2 className="section-title classes-title">
+          {t("central-entrance-exam.title")}
+        </h2>
+        <p>{t("central-entrance-exam.description1")}</p>
+        <div className="pdf-download-btns-container">
+          <button className="pdf-file-download-btn">
+            <a href="/pdfs/feladatgyujtemeny.pdf" download>
+              {t("central-entrance-exam.exercise_collection_download")}
+            </a>
+          </button>
+
+          <button className="pdf-file-download-btn">
+            <a href="/pdfs/megoldokulcs.pdf" download>
+              {t("central-entrance-exam.answer_key_download")}
+            </a>
+          </button>
+        </div>
+        <p>{t("central-entrance-exam.description2")}</p>
+        <p>{t("central-entrance-exam.workbook_price")}</p>
+        <CentralEntranceExamSignUpPopup />
+        <p>{t("central-entrance-exam.description3")}</p>
+        <h2 className="section-title classes-title">
           {t("courses_classes.main_title")}
         </h2>
         <div className="course">
@@ -306,19 +308,19 @@ export default function MainPage() {
             <div>
               <p>
                 {t(
-                  "courses_classes.individual_classes.individual_classes_description_one"
+                  "courses_classes.individual_classes.individual_classes_description_one",
                 )}
                 <br />
                 <br />
                 {t(
-                  "courses_classes.individual_classes.individual_classes_description_two"
+                  "courses_classes.individual_classes.individual_classes_description_two",
                 )}
               </p>
             </div>
             <div className="course-info">
               <span>
                 {t(
-                  "courses_classes.individual_classes.individual_course_duration"
+                  "courses_classes.individual_classes.individual_course_duration",
                 )}
               </span>
             </div>
@@ -328,7 +330,7 @@ export default function MainPage() {
           <div className="course-details">
             <h3 className="course-title">
               {t(
-                "courses_classes.small_group_courses.small_group_courses_title"
+                "courses_classes.small_group_courses.small_group_courses_title",
               )}
             </h3>
             <div className="course-details-container">
@@ -340,14 +342,14 @@ export default function MainPage() {
               <div className="course-info">
                 <span>
                   {t(
-                    "courses_classes.small_group_courses.small_group_courses_duration"
+                    "courses_classes.small_group_courses.small_group_courses_duration",
                   )}
                 </span>
                 <span>
                   {" "}
                   |{" "}
                   {t(
-                    "courses_classes.small_group_courses.small_group_courses_base_price"
+                    "courses_classes.small_group_courses.small_group_courses_base_price",
                   )}
                 </span>
                 {/* <span>
@@ -362,7 +364,7 @@ export default function MainPage() {
           </div>
         </div>
 
-        {/* <div className="courses-details" id="next-group-courses">
+        <div className="courses-details" id="next-group-courses">
           <h3 className="course-title">{t("course_options_list.title")}</h3>
           <ul>
             <li>
@@ -387,9 +389,9 @@ export default function MainPage() {
           </ul>
           <p>{<Trans i18nKey="group_courses_texts.first" />}</p>
           <p>{t("group_courses_texts.second")}</p>
-        </div> */}
+        </div>
 
-        {/* <div className="course-sign-up-container">
+        <div className="course-sign-up-container">
           <form action="submit" onSubmit={onSubmitSignUpForm}>
             <Input
               name="firstName"
@@ -438,8 +440,8 @@ export default function MainPage() {
             >
               {t("sign_up")}
             </button>
-          </form> */}
-        {/* </div> */}
+          </form>
+        </div>
       </section>
 
       <section className="myself" id="myself">

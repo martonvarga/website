@@ -11,7 +11,7 @@
     "title": "matematika vizsgafelkészítés és magánoktatás",
     "email_list_title": "További információkért iratkozz fel hírlevelemre.",
     "subscribe": "Feliratkozom",
-    "myself_description_one": "Varga Mártonnak hívnak, 23 éves, végzettségem szerint közgazdász vagyok. Az egyetem kezdete óta foglalkozom oktatással, évente több tucat diákot tanítok és készítek fel központi felvételi vizsgára, közép és emelt szintű érettségi vizsgára, valamint egyetemi zárthelyi vizsgákra is. <1/><1/>Habár fő profilomnak továbbra is az emelt szintű érettségit, valamint az egyetemi matematika tárgyakat tekintem, úgy érzem, hogy az évek során sikerült kidolgoznom olyan módszereket, technikákat, praktikákat, amelyek alkalmazásával a <strong>8. osztályos központi felvételi vizsga</strong>, valamint a <strong>középszintű érettségi</strong> trükkösebb feladati is abszolválhatóvá válnak, illetve két olyan menetrendet/tematikát, amelyek mentén mindkét vizsgára fel tudom készíteni még a matematikát alapvetően nem kedvelő, kevésbé, vagy egyáltalán nem magáénak érző tanulókat is.",
+    "myself_description_one": "Varga Mártonnak hívnak, 24 éves, közgazdász vagyok. Egyetemistaként kezdtem el oktatással foglalkozni, azóta évről évre több tucat diákot tanítok és készítek fel központi felvételi vizsgára, közép és emelt szintű érettségi vizsgára, valamint egyetemi zárthelyi vizsgákra is.",
     "myself_description_two": "Az óráim iránt kialakult kereslet ébresztette bennem a gondolatot, hogy ezeket megpróbáljam a tanulók még szélesebb körének elérhetővé tenni, ezért az utóbbi két vizsgára intenzív, <strong>kis csoportos (6-8 fő) felkészítő kurzusokat</strong> is szervezek. Természetesen ettől függetlenül továbbra is szívesen vállalok olyan tanulókat, akik inkább az egyéni konzultációt, felkészítést tartják maguk számára testhezállónak. Az óráimról, kurzusaimról részletesebb információkat a megfelelő fül alatt olvashatnak. Amennyiben felkeltettem érdeklődésüket, kérem, iratkozzanak fel hírlevelemre."
   },
   "courses_classes": {
@@ -77,11 +77,32 @@
     "sixth": "Szombat 11:30-13:00 Személyes"
   },
   "group_courses_texts": {
-    "first": "Az összes kurzus az <strong>november 3-ával kezdődő héten</strong> indul és a tanítási szüneteket leszámítva minden héten, a megfelelő időpontban lesznek megtartva az órák. Jelentkezni november 3. éjfélig lehet.",
+    "first": "Az összes kurzus az <strong>november 2-ával kezdődő héten</strong> indul és a tanítási szüneteket leszámítva minden héten, a megfelelő időpontban lesznek megtartva az órák. Jelentkezni november 2. éjfélig lehet.",
     "second": "További információkat a jelentkezést követően, e-mailben fogok küldeni. Találkozzunk az órákon, és hozzuk ki együtt a legtöbbet a rettegett felvételiből!"
   },
   "sign_up": "Jelentkezek",
   "snackbar": {
     "success": "Sikeresen jelentkeztél a kurzusra!"
-  }
+  },
+  "central-entrance-exam": {
+    "title": "Központi felvételi",
+    "description1": "A felvételi ugyan szinte minden évben tartogat valami olyan kérdést, csavart, amely meglepetést jelenthet, ennek ellenére a tesztek nagyon hasonlóak, a feladatokat egy jól követhető minta alapján állítják össze. Látható, hogy a feladatsor egyes elemei általában mely feladattípusok közül kerülnek ki. Ezt úgy lehet a legjobban kihasználni, ha ezeket a típusokat töviről hegyire végignézzük, begyakoroljuk. Ebben szeretnék segíteni az alábbi feladatgyűjteménnyel és a hozzá tartozó megoldókulccsal. A korábbi évek felvételi feladatait gyűjtöttem össze és soroltam be különböző kategóriákba, témakörökbe, ezzel lehetővé téve a célzott gyakorlást az egyes feladattípusokra.",
+    "description2": "Ha úgy érzed, hogy több iránymutatásra, segítségre, magyarázatra lenne szükséged, szeretném figyelmedbe ajánlani a vizsgára felkészítő munkafüzetemet, amely végigvezet téged a teljes tananyagon. Minden fejezet egy témakörrel és annak feladattípusaival foglalkozik. Egy rövid, de átfogó; rajzokkal, magyarázatokkal teli elméleti bevezetőt követően kidolgozott példafeladatokat találsz, melyek segíteni fognak a megértésben, valamint az elmélet gyakorlatba történő átültetésében. Minden témakör gyakorló feladatok ajánlásával zárul, ezeket mindenképp érdemes megoldani a feladatgyűjteményből. Persze a többi sem árt!",
+    "workbook_price": "A munkafüzet ára 4000 Ft.",
+    "exercise_collection_download": "Feladatgyűjtemény",
+    "answer_key_download": "Megoldókulcs",
+    "description3": "A felkészülésedet a munkafüzet tanulmányozása mellett azzal tudod még eredményesebbé tenni, ha jelentkezel az egyik felkészítő kurzusomra vagy akár egyéni órára. Ugyanis ezesetben már nem egyedül kell szembenézz a rád váró kihívással, hanem együtt, közösen fogjuk végigcsinálni a felkészülést. Garantálom, hogy minden tudásomat, tapasztalatomat be fogom vetni annak érdekében, hogy a lehető legtöbb pontot megszerezd a vizsgán."
+  },
+  "central-entrance-exam_signup-form": {
+    "first_name": "Vezetéknév",
+    "last_name": "Keresztnév",
+    "email": "Email",
+    "zip": "Irányítószám",
+    "city": "Település",
+    "address": "Cím",
+    "order_button": "Megrendelem",
+    "success": "A megrendelést követő 3 munkanapon belül, e-mailben jelentkezem a vásárlás további lépéseivel. Ha nem érkezik e-mail, kérlek, ellenőrizd a SPAM mappát, ha ott sincs, akkor pedig keress bizalommal."
+  },
+  "close": "Bezárás",
+  "send": "Küldés"
 }
